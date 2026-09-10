@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CarRental_DataAccess
 {
-    static class clsDataAccessSettings
+    public static class clsDataAccessSettings
     {
         public static string ConnectionString = "Server=.;Database=P4_CarRental;User Id=sa;Password=sa123456;";
     }
