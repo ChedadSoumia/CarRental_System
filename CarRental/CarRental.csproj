@@ -54,8 +54,56 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\ctrlPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\ctrlPersonInfo.Designer.cs">
+      <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\ctrlPersonInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\ctrlPersonInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlPersonInfoWithFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmAddEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmAddEditPerson.Designer.cs">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmPeopleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmPeopleList.Designer.cs">
+      <DependentUpon>frmPeopleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmPersonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmPersonInfo.Designer.cs">
+      <DependentUpon>frmPersonInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\ctrlPersonInfo.resx">
+      <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\ctrlPersonInfoWithFilter.resx">
+      <DependentUpon>ctrlPersonInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmAddEditPerson.resx">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmPeopleList.resx">
+      <DependentUpon>frmPeopleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmPersonInfo.resx">
+      <DependentUpon>frmPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -64,6 +112,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,6 +132,66 @@
       <Project>{efd37042-6a87-4933-9693-b0515c471dbb}</Project>
       <Name>CarRental_business</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finance_mode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finance_mode_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\People_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast_rewind.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_next1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast_next_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Person_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_Person_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_cancel_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identity_platform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_search8WHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter_none_black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

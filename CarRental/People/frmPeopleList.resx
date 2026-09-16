@@ -117,65 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="finance_mode" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\finance_mode.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Add_Person_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add_Person_Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_next1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_next1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Add_Person_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add_Person_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="save_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="person_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person_edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="person_Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person_Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="admin_panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\admin_panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="People_White" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\People_White.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="People_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\People_Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="person_search8WHITE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person_search8WHITE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fast_next_page" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fast_next_page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="identity_platform" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\identity_platform.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="finance_mode_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\finance_mode_Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="arrow_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="person_cancel_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\person_cancel_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fast_rewind" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fast_rewind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="filter_none_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\filter_none_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
