@@ -24,7 +24,7 @@ namespace CarRental.People
         }
 
         private void _RefreshPeopleList()
-        {x
+        {
             _dtAllPeople = clsPerson.GetAllPeople();
            
 
