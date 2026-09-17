@@ -55,7 +55,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cairo", 20.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(92, 0);
+            this.label1.Location = new System.Drawing.Point(91, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(311, 64);
             this.label1.TabIndex = 0;
@@ -65,7 +65,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.Image = global::CarRental.Properties.Resources.person_Info;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -84,8 +84,8 @@
             // 
             // frmPersonInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 32F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(743, 467);
             this.Controls.Add(this.ctrlPersonInfo1);
@@ -94,6 +94,8 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.MaximumSize = new System.Drawing.Size(761, 514);
+            this.MinimumSize = new System.Drawing.Size(761, 514);
             this.Name = "frmPersonInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Person Information";

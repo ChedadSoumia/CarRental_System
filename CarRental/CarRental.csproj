@@ -54,6 +54,10 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global Classes\clsFormat.cs" />
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsUtil.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
     <Compile Include="People\ctrlPersonInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -192,6 +196,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\filter_none_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame_person1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-375845.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

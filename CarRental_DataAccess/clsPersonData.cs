@@ -15,7 +15,7 @@ namespace CarRental_DataAccess
     {
         public static bool GetPersonInfoByID(int PersonID, ref string FirstName,
            ref string LastName,ref string Phone, ref string Email, 
-           ref byte Gendor, ref string ImagePath)
+           ref short Gendor, ref string ImagePath)
         {
             bool isFound = false;
 
@@ -41,8 +41,16 @@ namespace CarRental_DataAccess
 
 
                             LastName = (string)reader["LastName"];
-                            Gendor = (byte)reader["Gendor"];
-                            Phone = (string)reader["Phone"];
+                            
+
+                            if (reader["Phone"] != DBNull.Value)
+                            {
+                                Phone = (string)reader["Phone"];
+                            }
+                            else
+                            {
+                                Phone = null;
+                            }
 
                             if (reader["Email"] != DBNull.Value)
                             {
@@ -52,7 +60,7 @@ namespace CarRental_DataAccess
                             {
                                 Email = null;
                             }
-
+                            Gendor = Convert.ToInt16(reader["Gender"]);
 
                             if (reader["ImagePath"] != DBNull.Value)
                             {
@@ -91,38 +99,44 @@ namespace CarRental_DataAccess
 
         public static int AddNewPerson( string FirstName,
             string LastName,  string Phone,  string Email,
-            byte Gendor,  string ImagePath)
+            short Gendor,  string ImagePath)
         {
             int PersonID = -1;
 
             using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
+                connection.Open();
                 using (SqlCommand command = new SqlCommand("spu_AddNewPerson", connection))
                 {
+
                     command.CommandType = CommandType.StoredProcedure;
 
-                    command.Parameters.AddWithValue("@FirstName", FirstName);
+                    command.Parameters.AddWithValue("@Person_Firstname", FirstName);
 
 
 
-                    command.Parameters.AddWithValue("@LastName", LastName);
-                    command.Parameters.AddWithValue("@Gendor", Gendor);
-                    command.Parameters.AddWithValue("@Phone", Phone);
+                    command.Parameters.AddWithValue("@Person_Lastname", LastName);
+                    command.Parameters.AddWithValue("@Person_Gender", Gendor);
+
+                    if (Phone != "" && Phone != null)
+                        command.Parameters.AddWithValue("@Person_Phone", Phone);
+                    else
+                        command.Parameters.AddWithValue("@Person_Phone", System.DBNull.Value);
 
                     if (Email != "" && Email != null)
-                        command.Parameters.AddWithValue("@Email", Email);
+                        command.Parameters.AddWithValue("@Person_Email", Email);
                     else
-                        command.Parameters.AddWithValue("@Email", System.DBNull.Value);
+                        command.Parameters.AddWithValue("@Person_Email", System.DBNull.Value);
 
 
                     if (ImagePath != "" && ImagePath != null)
-                        command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                        command.Parameters.AddWithValue("@Person_Imagepath", ImagePath);
                     else
-                        command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
+                        command.Parameters.AddWithValue("@Person_Imagepath", System.DBNull.Value);
 
                     try
                     {
-                        connection.Open();
+                        
 
                         SqlParameter outputIdParam = new SqlParameter("@Person_id", SqlDbType.Int)
                         {
@@ -136,7 +150,7 @@ namespace CarRental_DataAccess
 
 
                         // Retrieve the ID of the new person
-                        PersonID = (int)command.Parameters["@Person_id"].Value;
+                        PersonID = Convert.ToInt32(command.Parameters["@Person_id"].Value);
                     }
 
                     catch (Exception ex)
@@ -154,7 +168,7 @@ namespace CarRental_DataAccess
 
         public static bool UpdatePerson(int PersonID,string FirstName,
             string LastName, string Phone, string Email,
-            byte Gendor, string ImagePath)
+            short Gendor, string ImagePath)
         {
 
             int rowsAffected = 0;
@@ -166,24 +180,29 @@ namespace CarRental_DataAccess
                     command.CommandType = CommandType.StoredProcedure;
 
                     command.Parameters.AddWithValue("@Person_id", PersonID);
-                    command.Parameters.AddWithValue("@FirstName", FirstName);
+                    command.Parameters.AddWithValue("@Person_Firstname", FirstName);
 
 
 
-                    command.Parameters.AddWithValue("@LastName", LastName);
-                    command.Parameters.AddWithValue("@Gendor", Gendor);
-                    command.Parameters.AddWithValue("@Phone", Phone);
+                    command.Parameters.AddWithValue("@Person_Lastname", LastName);
+                    command.Parameters.AddWithValue("@Person_Gender", Gendor);
+
+
+                    if (Phone != "" && Phone != null)
+                        command.Parameters.AddWithValue("@Person_Phone", Phone);
+                    else
+                        command.Parameters.AddWithValue("@Person_Phone", System.DBNull.Value);
 
                     if (Email != "" && Email != null)
-                        command.Parameters.AddWithValue("@Email", Email);
+                        command.Parameters.AddWithValue("@Person_Email", Email);
                     else
-                        command.Parameters.AddWithValue("@Email", System.DBNull.Value);
+                        command.Parameters.AddWithValue("@Person_Email", System.DBNull.Value);
 
 
                     if (ImagePath != "" && ImagePath != null)
-                        command.Parameters.AddWithValue("@ImagePath", ImagePath);
+                        command.Parameters.AddWithValue("@Person_Imagepath", ImagePath);
                     else
-                        command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
+                        command.Parameters.AddWithValue("@Person_Imagepath", System.DBNull.Value);
 
                     try
                     {
@@ -243,8 +262,8 @@ namespace CarRental_DataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"Delete People 
-                                where PersonID = @PersonID";
+            string query = @"Delete FROM People 
+                                where Person_id = @PersonID";
 
             SqlCommand command = new SqlCommand(query, connection);
 

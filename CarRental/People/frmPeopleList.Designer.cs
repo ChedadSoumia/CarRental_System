@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAllPeople = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnFirstPage = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
@@ -57,13 +57,20 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.makeItAsUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.makeHimAsCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.PnlGendor = new System.Windows.Forms.TableLayoutPanel();
+            this.rbMale = new System.Windows.Forms.RadioButton();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbAll = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.PnlGendor.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -102,12 +109,12 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // dataGridView1
+            // dgvAllPeople
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAllPeople.AllowUserToAddRows = false;
+            this.dgvAllPeople.AllowUserToDeleteRows = false;
+            this.dgvAllPeople.AllowUserToOrderColumns = true;
+            this.dgvAllPeople.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,18 +122,18 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(54, 199);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(1224, 542);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvAllPeople.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAllPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllPeople.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvAllPeople.EnableHeadersVisualStyles = false;
+            this.dgvAllPeople.GridColor = System.Drawing.Color.White;
+            this.dgvAllPeople.Location = new System.Drawing.Point(54, 199);
+            this.dgvAllPeople.Name = "dgvAllPeople";
+            this.dgvAllPeople.ReadOnly = true;
+            this.dgvAllPeople.RowHeadersWidth = 51;
+            this.dgvAllPeople.RowTemplate.Height = 26;
+            this.dgvAllPeople.Size = new System.Drawing.Size(1224, 542);
+            this.dgvAllPeople.TabIndex = 2;
             // 
             // flowLayoutPanel1
             // 
@@ -235,12 +242,12 @@
             this.tableLayoutPanel2.ColumnCount = 4;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27718F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.72282F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 758F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
+            this.tableLayoutPanel2.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cbFilter, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtFilter, 2, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(54, 135);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -266,7 +273,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 32);
+            this.label2.Size = new System.Drawing.Size(86, 32);
             this.label2.TabIndex = 11;
             this.label2.Text = "Filter By : ";
             // 
@@ -279,19 +286,23 @@
             "Person ID",
             "Full name",
             "Phone",
-            "Gmail"});
-            this.cbFilter.Location = new System.Drawing.Point(92, 14);
+            "Gmail",
+            "Gendor"});
+            this.cbFilter.Location = new System.Drawing.Point(114, 14);
             this.cbFilter.Name = "cbFilter";
-            this.cbFilter.Size = new System.Drawing.Size(287, 40);
+            this.cbFilter.Size = new System.Drawing.Size(288, 40);
             this.cbFilter.TabIndex = 12;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // txtFilter
             // 
             this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtFilter.Location = new System.Drawing.Point(385, 7);
+            this.txtFilter.Location = new System.Drawing.Point(3, 1);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(299, 39);
+            this.txtFilter.Size = new System.Drawing.Size(278, 39);
             this.txtFilter.TabIndex = 13;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter_KeyPress);
             // 
             // contextMenuStrip1
             // 
@@ -307,7 +318,7 @@
             this.makeItAsUserToolStripMenuItem,
             this.makeHimAsCustomerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(259, 232);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(259, 260);
             // 
             // showPeopleInfoToolStripMenuItem
             // 
@@ -315,6 +326,7 @@
             this.showPeopleInfoToolStripMenuItem.Name = "showPeopleInfoToolStripMenuItem";
             this.showPeopleInfoToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
             this.showPeopleInfoToolStripMenuItem.Text = "Show PersonInfo";
+            this.showPeopleInfoToolStripMenuItem.Click += new System.EventHandler(this.showPeopleInfoToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -327,6 +339,7 @@
             this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
             this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
             this.addNewPersonToolStripMenuItem.Text = "Add new Person";
+            this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.addNewPersonToolStripMenuItem_Click);
             // 
             // editPersonToolStripMenuItem
             // 
@@ -334,6 +347,7 @@
             this.editPersonToolStripMenuItem.Name = "editPersonToolStripMenuItem";
             this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
             this.editPersonToolStripMenuItem.Text = "Edit Person";
+            this.editPersonToolStripMenuItem.Click += new System.EventHandler(this.editPersonToolStripMenuItem_Click);
             // 
             // deletePersonToolStripMenuItem
             // 
@@ -341,6 +355,7 @@
             this.deletePersonToolStripMenuItem.Name = "deletePersonToolStripMenuItem";
             this.deletePersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
             this.deletePersonToolStripMenuItem.Text = "Delete Person";
+            this.deletePersonToolStripMenuItem.Click += new System.EventHandler(this.deletePersonToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -361,6 +376,65 @@
             this.makeHimAsCustomerToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
             this.makeHimAsCustomerToolStripMenuItem.Text = "Make him as Customer";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.PnlGendor);
+            this.panel1.Controls.Add(this.txtFilter);
+            this.panel1.Location = new System.Drawing.Point(481, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(327, 48);
+            this.panel1.TabIndex = 10;
+            // 
+            // PnlGendor
+            // 
+            this.PnlGendor.ColumnCount = 3;
+            this.PnlGendor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.625F));
+            this.PnlGendor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.375F));
+            this.PnlGendor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
+            this.PnlGendor.Controls.Add(this.rbAll, 0, 0);
+            this.PnlGendor.Controls.Add(this.rbFemale, 2, 0);
+            this.PnlGendor.Controls.Add(this.rbMale, 1, 0);
+            this.PnlGendor.Location = new System.Drawing.Point(3, 3);
+            this.PnlGendor.Name = "PnlGendor";
+            this.PnlGendor.RowCount = 1;
+            this.PnlGendor.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PnlGendor.Size = new System.Drawing.Size(324, 44);
+            this.PnlGendor.TabIndex = 21;
+            // 
+            // rbMale
+            // 
+            this.rbMale.AutoSize = true;
+            this.rbMale.Location = new System.Drawing.Point(86, 3);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(71, 36);
+            this.rbMale.TabIndex = 18;
+            this.rbMale.Text = "Male";
+            this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.CheckedChanged += new System.EventHandler(this.rbMale_CheckedChanged);
+            // 
+            // rbFemale
+            // 
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Location = new System.Drawing.Point(185, 3);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(89, 36);
+            this.rbFemale.TabIndex = 6;
+            this.rbFemale.Text = "Female";
+            this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.CheckedChanged += new System.EventHandler(this.rbFemale_CheckedChanged);
+            // 
+            // rbAll
+            // 
+            this.rbAll.AutoSize = true;
+            this.rbAll.Checked = true;
+            this.rbAll.Location = new System.Drawing.Point(3, 3);
+            this.rbAll.Name = "rbAll";
+            this.rbAll.Size = new System.Drawing.Size(53, 36);
+            this.rbAll.TabIndex = 19;
+            this.rbAll.Text = "All";
+            this.rbAll.UseVisualStyleBackColor = true;
+            this.rbAll.CheckedChanged += new System.EventHandler(this.rbAll_CheckedChanged);
+            // 
             // frmPeopleList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -369,7 +443,7 @@
             this.ClientSize = new System.Drawing.Size(1300, 820);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvAllPeople);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -382,7 +456,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -390,6 +464,10 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.PnlGendor.ResumeLayout(false);
+            this.PnlGendor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -399,7 +477,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAllPeople;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnFirstPage;
         private System.Windows.Forms.Button btnLastPage;
@@ -423,5 +501,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem makeItAsUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem makeHimAsCustomerToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TableLayoutPanel PnlGendor;
+        private System.Windows.Forms.RadioButton rbMale;
+        private System.Windows.Forms.RadioButton rbFemale;
+        private System.Windows.Forms.RadioButton rbAll;
     }
 }

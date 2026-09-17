@@ -30,21 +30,21 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.llEditPersonInfo = new System.Windows.Forms.LinkLabel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblPhone = new System.Windows.Forms.Label();
+            this.pbPersonImage = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblGendor = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblPersonID = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.lblGendor = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.pbPersonImage = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -73,26 +73,18 @@
             this.llEditPersonInfo.TabIndex = 4;
             this.llEditPersonInfo.TabStop = true;
             this.llEditPersonInfo.Text = "Edit Person Info";
+            this.llEditPersonInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llEditPersonInfo_LinkClicked);
             // 
-            // label9
+            // pbPersonImage
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 110);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 37);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Phone";
-            // 
-            // lblPhone
-            // 
-            this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(161, 110);
-            this.lblPhone.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(58, 37);
-            this.lblPhone.TabIndex = 3;
-            this.lblPhone.Text = "[???]";
+            this.pbPersonImage.Image = global::CarRental.Properties.Resources.icon_375845;
+            this.pbPersonImage.Location = new System.Drawing.Point(425, 50);
+            this.pbPersonImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.pbPersonImage.Name = "pbPersonImage";
+            this.pbPersonImage.Size = new System.Drawing.Size(270, 211);
+            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPersonImage.TabIndex = 2;
+            this.pbPersonImage.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -121,6 +113,46 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(387, 277);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // lblGendor
+            // 
+            this.lblGendor.AutoSize = true;
+            this.lblGendor.Location = new System.Drawing.Point(161, 220);
+            this.lblGendor.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblGendor.Name = "lblGendor";
+            this.lblGendor.Size = new System.Drawing.Size(58, 37);
+            this.lblGendor.TabIndex = 3;
+            this.lblGendor.Text = "[???]";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(5, 220);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 37);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Gendor";
+            // 
+            // lblPhone
+            // 
+            this.lblPhone.AutoSize = true;
+            this.lblPhone.Location = new System.Drawing.Point(161, 110);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(58, 37);
+            this.lblPhone.TabIndex = 3;
+            this.lblPhone.Text = "[???]";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(5, 110);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 37);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Phone";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -140,26 +172,6 @@
             this.label3.Size = new System.Drawing.Size(68, 37);
             this.label3.TabIndex = 0;
             this.label3.Text = "Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(5, 220);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 37);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Gendor";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(5, 165);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 37);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Email";
             // 
             // lblPersonID
             // 
@@ -181,15 +193,15 @@
             this.lblName.TabIndex = 2;
             this.lblName.Text = "[???]";
             // 
-            // lblGendor
+            // label5
             // 
-            this.lblGendor.AutoSize = true;
-            this.lblGendor.Location = new System.Drawing.Point(161, 220);
-            this.lblGendor.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblGendor.Name = "lblGendor";
-            this.lblGendor.Size = new System.Drawing.Size(58, 37);
-            this.lblGendor.TabIndex = 3;
-            this.lblGendor.Text = "[???]";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 165);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 37);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Email";
             // 
             // lblEmail
             // 
@@ -200,16 +212,6 @@
             this.lblEmail.Size = new System.Drawing.Size(58, 37);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "[???]";
-            // 
-            // pbPersonImage
-            // 
-            this.pbPersonImage.Location = new System.Drawing.Point(425, 50);
-            this.pbPersonImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.pbPersonImage.Name = "pbPersonImage";
-            this.pbPersonImage.Size = new System.Drawing.Size(270, 211);
-            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPersonImage.TabIndex = 2;
-            this.pbPersonImage.TabStop = false;
             // 
             // ctrlPersonInfo
             // 
@@ -223,9 +225,9 @@
             this.Size = new System.Drawing.Size(731, 363);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
             this.ResumeLayout(false);
 
         }

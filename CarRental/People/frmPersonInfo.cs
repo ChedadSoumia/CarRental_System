@@ -12,9 +12,11 @@ namespace CarRental.People
 {
     public partial class frmPersonInfo : Form
     {
-        public frmPersonInfo()
+        public frmPersonInfo(int PersonID)
         {
             InitializeComponent();
+            ctrlPersonInfo1.LoadPersonInfo(PersonID);
         }
+
     }
 }

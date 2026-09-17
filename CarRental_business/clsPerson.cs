@@ -23,7 +23,7 @@ namespace CarRental_business
             get { return FirstName + " "  + LastName; }
 
         }
-        public byte Gendor { set; get; }
+        public short Gendor { set; get; }
         public string Phone { set; get; }
         public string Email { set; get; }
 
@@ -51,7 +51,7 @@ namespace CarRental_business
         }
 
         private clsPerson(int PersonID, string FirstName,
-            string LastName, string Phone, string Email, byte Gendor, string ImagePath)
+            string LastName, string Phone, string Email, short Gendor, string ImagePath)
 
         {
             this.PersonID = PersonID;
@@ -92,7 +92,7 @@ namespace CarRental_business
 
             string FirstName = "",  LastName = "",  Email = "", Phone = "", ImagePath = "";
             
-            byte Gendor = 0;
+            short Gendor = 0;
 
             bool IsFound = clsPersonData.GetPersonInfoByID
                                 (
