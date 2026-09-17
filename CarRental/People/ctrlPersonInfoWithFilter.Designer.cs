@@ -51,23 +51,23 @@
             this.gbFilters.Name = "gbFilters";
             this.gbFilters.RowCount = 1;
             this.gbFilters.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.gbFilters.Size = new System.Drawing.Size(509, 78);
+            this.gbFilters.Size = new System.Drawing.Size(642, 78);
             this.gbFilters.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 7);
+            this.label2.Location = new System.Drawing.Point(3, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 64);
+            this.label2.Size = new System.Drawing.Size(156, 32);
             this.label2.TabIndex = 11;
             this.label2.Text = "Filter By Person ID: ";
             // 
             // txtFilter
             // 
             this.txtFilter.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtFilter.Location = new System.Drawing.Point(138, 19);
+            this.txtFilter.Location = new System.Drawing.Point(174, 19);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(249, 39);
             this.txtFilter.TabIndex = 13;
@@ -81,7 +81,7 @@
             this.btnFilter.Enabled = false;
             this.btnFilter.FlatAppearance.BorderSize = 0;
             this.btnFilter.Image = global::CarRental.Properties.Resources.person_search8WHITE;
-            this.btnFilter.Location = new System.Drawing.Point(398, 16);
+            this.btnFilter.Location = new System.Drawing.Point(502, 16);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(55, 45);
             this.btnFilter.TabIndex = 14;

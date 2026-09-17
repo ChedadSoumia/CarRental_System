@@ -1,4 +1,6 @@
-﻿using CarRental.People;
+﻿using CarRental.Dashboard;
+using CarRental.People;
+using CarRental.Users;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,7 @@ namespace CarRental
         public frmMain()
         {
             InitializeComponent();
+            _LoadForm(new frmDashboard());
         }
         private void _LoadForm(object frm)
         {
@@ -33,6 +36,22 @@ namespace CarRental
         private void btnPeople_Click(object sender, EventArgs e)
         {
             _LoadForm(new frmPeopleList());
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            _LoadForm(new frmUsersList());
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            _LoadForm(new frmDashboard());
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            tableLayoutPanel1.Visible = !tableLayoutPanel1.Visible;
         }
     }
 }
