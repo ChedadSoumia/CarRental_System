@@ -33,39 +33,39 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtFilter = new System.Windows.Forms.TextBox();
+            this.btnAddNewUser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblPageNumber = new System.Windows.Forms.Label();
-            this.dgvAllUsers = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblCountRecord = new System.Windows.Forms.Label();
-            this.btnAddNewUser = new System.Windows.Forms.Button();
             this.btnFirstPage = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
+            this.lblPageNumber = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnLastPage = new System.Windows.Forms.Button();
+            this.dgvAllUsers = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showPeopleInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.addNewPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.makeItAsUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblCountRecord = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -74,7 +74,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27718F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.72282F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 695F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAddNewUser, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -89,7 +89,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.txtFilter);
-            this.panel1.Location = new System.Drawing.Point(466, 3);
+            this.panel1.Location = new System.Drawing.Point(465, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 48);
             this.panel1.TabIndex = 10;
@@ -101,6 +101,18 @@
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(278, 39);
             this.txtFilter.TabIndex = 13;
+            // 
+            // btnAddNewUser
+            // 
+            this.btnAddNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnAddNewUser.FlatAppearance.BorderSize = 0;
+            this.btnAddNewUser.Image = global::CarRental.Properties.Resources.how_to_reg;
+            this.btnAddNewUser.Location = new System.Drawing.Point(1160, 3);
+            this.btnAddNewUser.Name = "btnAddNewUser";
+            this.btnAddNewUser.Size = new System.Drawing.Size(53, 45);
+            this.btnAddNewUser.TabIndex = 10;
+            this.btnAddNewUser.UseVisualStyleBackColor = false;
+            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
             // 
             // label2
             // 
@@ -122,7 +134,7 @@
             "Person ID",
             "Full name",
             "Active"});
-            this.cbFilter.Location = new System.Drawing.Point(111, 7);
+            this.cbFilter.Location = new System.Drawing.Point(110, 14);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(288, 40);
             this.cbFilter.TabIndex = 12;
@@ -140,6 +152,29 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(387, 54);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
+            // btnFirstPage
+            // 
+            this.btnFirstPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnFirstPage.FlatAppearance.BorderSize = 0;
+            this.btnFirstPage.Image = global::CarRental.Properties.Resources.fast_rewind;
+            this.btnFirstPage.Location = new System.Drawing.Point(3, 3);
+            this.btnFirstPage.Name = "btnFirstPage";
+            this.btnFirstPage.Size = new System.Drawing.Size(55, 45);
+            this.btnFirstPage.TabIndex = 4;
+            this.btnFirstPage.UseVisualStyleBackColor = false;
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnPrevious.FlatAppearance.BorderSize = 0;
+            this.btnPrevious.Image = global::CarRental.Properties.Resources.arrow_back;
+            this.btnPrevious.Location = new System.Drawing.Point(64, 3);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPrevious.Size = new System.Drawing.Size(55, 45);
+            this.btnPrevious.TabIndex = 3;
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            // 
             // lblPageNumber
             // 
             this.lblPageNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -150,6 +185,29 @@
             this.lblPageNumber.Size = new System.Drawing.Size(128, 32);
             this.lblPageNumber.TabIndex = 5;
             this.lblPageNumber.Text = "Page 1 of 100";
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.Image = global::CarRental.Properties.Resources.arrow_forward;
+            this.btnNext.Location = new System.Drawing.Point(259, 3);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnNext.Size = new System.Drawing.Size(55, 45);
+            this.btnNext.TabIndex = 5;
+            this.btnNext.UseVisualStyleBackColor = false;
+            // 
+            // btnLastPage
+            // 
+            this.btnLastPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLastPage.FlatAppearance.BorderSize = 0;
+            this.btnLastPage.Image = global::CarRental.Properties.Resources.fast_next_page;
+            this.btnLastPage.Location = new System.Drawing.Point(320, 3);
+            this.btnLastPage.Name = "btnLastPage";
+            this.btnLastPage.Size = new System.Drawing.Size(55, 45);
+            this.btnLastPage.TabIndex = 6;
+            this.btnLastPage.UseVisualStyleBackColor = false;
             // 
             // dgvAllUsers
             // 
@@ -193,15 +251,60 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(223, 232);
             // 
+            // showPeopleInfoToolStripMenuItem
+            // 
+            this.showPeopleInfoToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_Info;
+            this.showPeopleInfoToolStripMenuItem.Name = "showPeopleInfoToolStripMenuItem";
+            this.showPeopleInfoToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
+            this.showPeopleInfoToolStripMenuItem.Text = "Show User Info";
+            this.showPeopleInfoToolStripMenuItem.Click += new System.EventHandler(this.showPeopleInfoToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(219, 6);
             // 
+            // addNewPersonToolStripMenuItem
+            // 
+            this.addNewPersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.Add_Person_Black;
+            this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
+            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
+            this.addNewPersonToolStripMenuItem.Text = "Add new User";
+            this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.addNewPersonToolStripMenuItem_Click);
+            // 
+            // editPersonToolStripMenuItem
+            // 
+            this.editPersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_edit;
+            this.editPersonToolStripMenuItem.Name = "editPersonToolStripMenuItem";
+            this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
+            this.editPersonToolStripMenuItem.Text = "Edit User";
+            // 
+            // deletePersonToolStripMenuItem
+            // 
+            this.deletePersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_cancel_;
+            this.deletePersonToolStripMenuItem.Name = "deletePersonToolStripMenuItem";
+            this.deletePersonToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
+            this.deletePersonToolStripMenuItem.Text = "Delete User";
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(219, 6);
+            // 
+            // makeItAsUserToolStripMenuItem
+            // 
+            this.makeItAsUserToolStripMenuItem.Image = global::CarRental.Properties.Resources.safety_check_off;
+            this.makeItAsUserToolStripMenuItem.Name = "makeItAsUserToolStripMenuItem";
+            this.makeItAsUserToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
+            this.makeItAsUserToolStripMenuItem.Text = "Desactivate";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Image = global::CarRental.Properties.Resources.password;
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -227,6 +330,17 @@
             this.label1.Size = new System.Drawing.Size(170, 64);
             this.label1.TabIndex = 0;
             this.label1.Text = "Users List";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.Image = global::CarRental.Properties.Resources.person_shield_Balck;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // flowLayoutPanel2
             // 
@@ -260,120 +374,6 @@
             this.lblCountRecord.Size = new System.Drawing.Size(10, 32);
             this.lblCountRecord.TabIndex = 6;
             // 
-            // btnAddNewUser
-            // 
-            this.btnAddNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnAddNewUser.FlatAppearance.BorderSize = 0;
-            this.btnAddNewUser.Image = global::CarRental.Properties.Resources.how_to_reg;
-            this.btnAddNewUser.Location = new System.Drawing.Point(1161, 3);
-            this.btnAddNewUser.Name = "btnAddNewUser";
-            this.btnAddNewUser.Size = new System.Drawing.Size(53, 45);
-            this.btnAddNewUser.TabIndex = 10;
-            this.btnAddNewUser.UseVisualStyleBackColor = false;
-            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
-            // 
-            // btnFirstPage
-            // 
-            this.btnFirstPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnFirstPage.FlatAppearance.BorderSize = 0;
-            this.btnFirstPage.Image = global::CarRental.Properties.Resources.fast_rewind;
-            this.btnFirstPage.Location = new System.Drawing.Point(3, 3);
-            this.btnFirstPage.Name = "btnFirstPage";
-            this.btnFirstPage.Size = new System.Drawing.Size(55, 45);
-            this.btnFirstPage.TabIndex = 4;
-            this.btnFirstPage.UseVisualStyleBackColor = false;
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnPrevious.FlatAppearance.BorderSize = 0;
-            this.btnPrevious.Image = global::CarRental.Properties.Resources.arrow_back;
-            this.btnPrevious.Location = new System.Drawing.Point(64, 3);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnPrevious.Size = new System.Drawing.Size(55, 45);
-            this.btnPrevious.TabIndex = 3;
-            this.btnPrevious.UseVisualStyleBackColor = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.Image = global::CarRental.Properties.Resources.arrow_forward;
-            this.btnNext.Location = new System.Drawing.Point(259, 3);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnNext.Size = new System.Drawing.Size(55, 45);
-            this.btnNext.TabIndex = 5;
-            this.btnNext.UseVisualStyleBackColor = false;
-            // 
-            // btnLastPage
-            // 
-            this.btnLastPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnLastPage.FlatAppearance.BorderSize = 0;
-            this.btnLastPage.Image = global::CarRental.Properties.Resources.fast_next_page;
-            this.btnLastPage.Location = new System.Drawing.Point(320, 3);
-            this.btnLastPage.Name = "btnLastPage";
-            this.btnLastPage.Size = new System.Drawing.Size(55, 45);
-            this.btnLastPage.TabIndex = 6;
-            this.btnLastPage.UseVisualStyleBackColor = false;
-            // 
-            // showPeopleInfoToolStripMenuItem
-            // 
-            this.showPeopleInfoToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_Info;
-            this.showPeopleInfoToolStripMenuItem.Name = "showPeopleInfoToolStripMenuItem";
-            this.showPeopleInfoToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
-            this.showPeopleInfoToolStripMenuItem.Text = "Show User Info";
-            this.showPeopleInfoToolStripMenuItem.Click += new System.EventHandler(this.showPeopleInfoToolStripMenuItem_Click);
-            // 
-            // addNewPersonToolStripMenuItem
-            // 
-            this.addNewPersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.Add_Person_Black;
-            this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
-            this.addNewPersonToolStripMenuItem.Text = "Add new User";
-            this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.addNewPersonToolStripMenuItem_Click);
-            // 
-            // editPersonToolStripMenuItem
-            // 
-            this.editPersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_edit;
-            this.editPersonToolStripMenuItem.Name = "editPersonToolStripMenuItem";
-            this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
-            this.editPersonToolStripMenuItem.Text = "Edit User";
-            // 
-            // deletePersonToolStripMenuItem
-            // 
-            this.deletePersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_cancel_;
-            this.deletePersonToolStripMenuItem.Name = "deletePersonToolStripMenuItem";
-            this.deletePersonToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
-            this.deletePersonToolStripMenuItem.Text = "Delete User";
-            // 
-            // makeItAsUserToolStripMenuItem
-            // 
-            this.makeItAsUserToolStripMenuItem.Image = global::CarRental.Properties.Resources.safety_check_off;
-            this.makeItAsUserToolStripMenuItem.Name = "makeItAsUserToolStripMenuItem";
-            this.makeItAsUserToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
-            this.makeItAsUserToolStripMenuItem.Text = "Desactivate";
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Image = global::CarRental.Properties.Resources.password;
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Image = global::CarRental.Properties.Resources.person_shield_Balck;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmUsersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -401,9 +401,9 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
