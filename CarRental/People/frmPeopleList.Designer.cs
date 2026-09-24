@@ -32,12 +32,23 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvAllPeople = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showPeopleInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.addNewPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deletePersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.makeItAsUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeHimAsCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnFirstPage = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
             this.lblPageNumber = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnLastPage = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCountRecord = new System.Windows.Forms.Label();
@@ -48,21 +59,11 @@
             this.rbFemale = new System.Windows.Forms.RadioButton();
             this.rbMale = new System.Windows.Forms.RadioButton();
             this.txtFilter = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cbFilter = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnFirstPage = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnLastPage = new System.Windows.Forms.Button();
-            this.showPeopleInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deletePersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.makeItAsUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.makeHimAsCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -70,7 +71,6 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PnlGendor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -97,6 +97,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(289, 64);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.pictureBox1.Image = global::CarRental.Properties.Resources.People_Black;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(74, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // dgvAllPeople
             // 
@@ -140,15 +151,61 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(259, 232);
             // 
+            // showPeopleInfoToolStripMenuItem
+            // 
+            this.showPeopleInfoToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_Info;
+            this.showPeopleInfoToolStripMenuItem.Name = "showPeopleInfoToolStripMenuItem";
+            this.showPeopleInfoToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
+            this.showPeopleInfoToolStripMenuItem.Text = "Show PersonInfo";
+            this.showPeopleInfoToolStripMenuItem.Click += new System.EventHandler(this.showPeopleInfoToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(255, 6);
             // 
+            // addNewPersonToolStripMenuItem
+            // 
+            this.addNewPersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.Add_Person_Black;
+            this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
+            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
+            this.addNewPersonToolStripMenuItem.Text = "Add new Person";
+            this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.addNewPersonToolStripMenuItem_Click);
+            // 
+            // editPersonToolStripMenuItem
+            // 
+            this.editPersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_edit;
+            this.editPersonToolStripMenuItem.Name = "editPersonToolStripMenuItem";
+            this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
+            this.editPersonToolStripMenuItem.Text = "Edit Person";
+            this.editPersonToolStripMenuItem.Click += new System.EventHandler(this.editPersonToolStripMenuItem_Click);
+            // 
+            // deletePersonToolStripMenuItem
+            // 
+            this.deletePersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_cancel_;
+            this.deletePersonToolStripMenuItem.Name = "deletePersonToolStripMenuItem";
+            this.deletePersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
+            this.deletePersonToolStripMenuItem.Text = "Delete Person";
+            this.deletePersonToolStripMenuItem.Click += new System.EventHandler(this.deletePersonToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(255, 6);
+            // 
+            // makeItAsUserToolStripMenuItem
+            // 
+            this.makeItAsUserToolStripMenuItem.Image = global::CarRental.Properties.Resources.admin_panel;
+            this.makeItAsUserToolStripMenuItem.Name = "makeItAsUserToolStripMenuItem";
+            this.makeItAsUserToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
+            this.makeItAsUserToolStripMenuItem.Text = "Make as User";
+            // 
+            // makeHimAsCustomerToolStripMenuItem
+            // 
+            this.makeHimAsCustomerToolStripMenuItem.Image = global::CarRental.Properties.Resources.identity_platform;
+            this.makeHimAsCustomerToolStripMenuItem.Name = "makeHimAsCustomerToolStripMenuItem";
+            this.makeHimAsCustomerToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
+            this.makeHimAsCustomerToolStripMenuItem.Text = "Make him as Customer";
             // 
             // flowLayoutPanel1
             // 
@@ -163,6 +220,29 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(387, 54);
             this.flowLayoutPanel1.TabIndex = 7;
             // 
+            // btnFirstPage
+            // 
+            this.btnFirstPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnFirstPage.FlatAppearance.BorderSize = 0;
+            this.btnFirstPage.Image = global::CarRental.Properties.Resources.fast_rewind;
+            this.btnFirstPage.Location = new System.Drawing.Point(3, 3);
+            this.btnFirstPage.Name = "btnFirstPage";
+            this.btnFirstPage.Size = new System.Drawing.Size(55, 45);
+            this.btnFirstPage.TabIndex = 4;
+            this.btnFirstPage.UseVisualStyleBackColor = false;
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnPrevious.FlatAppearance.BorderSize = 0;
+            this.btnPrevious.Image = global::CarRental.Properties.Resources.arrow_back;
+            this.btnPrevious.Location = new System.Drawing.Point(64, 3);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnPrevious.Size = new System.Drawing.Size(55, 45);
+            this.btnPrevious.TabIndex = 3;
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            // 
             // lblPageNumber
             // 
             this.lblPageNumber.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -173,6 +253,29 @@
             this.lblPageNumber.Size = new System.Drawing.Size(128, 32);
             this.lblPageNumber.TabIndex = 5;
             this.lblPageNumber.Text = "Page 1 of 100";
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.Image = global::CarRental.Properties.Resources.arrow_forward;
+            this.btnNext.Location = new System.Drawing.Point(259, 3);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnNext.Size = new System.Drawing.Size(55, 45);
+            this.btnNext.TabIndex = 5;
+            this.btnNext.UseVisualStyleBackColor = false;
+            // 
+            // btnLastPage
+            // 
+            this.btnLastPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnLastPage.FlatAppearance.BorderSize = 0;
+            this.btnLastPage.Image = global::CarRental.Properties.Resources.fast_next_page;
+            this.btnLastPage.Location = new System.Drawing.Point(320, 3);
+            this.btnLastPage.Name = "btnLastPage";
+            this.btnLastPage.Size = new System.Drawing.Size(55, 45);
+            this.btnLastPage.TabIndex = 6;
+            this.btnLastPage.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel2
             // 
@@ -212,7 +315,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27718F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.72282F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 89F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -228,7 +331,7 @@
             // 
             this.panel1.Controls.Add(this.PnlGendor);
             this.panel1.Controls.Add(this.txtFilter);
-            this.panel1.Location = new System.Drawing.Point(475, 3);
+            this.panel1.Location = new System.Drawing.Point(474, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 48);
             this.panel1.TabIndex = 10;
@@ -238,7 +341,7 @@
             this.PnlGendor.ColumnCount = 3;
             this.PnlGendor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.625F));
             this.PnlGendor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.375F));
-            this.PnlGendor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.PnlGendor.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.PnlGendor.Controls.Add(this.rbAll, 0, 0);
             this.PnlGendor.Controls.Add(this.rbFemale, 2, 0);
             this.PnlGendor.Controls.Add(this.rbMale, 1, 0);
@@ -265,7 +368,7 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(179, 3);
+            this.rbFemale.Location = new System.Drawing.Point(178, 3);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(89, 36);
             this.rbFemale.TabIndex = 6;
@@ -294,6 +397,18 @@
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter_KeyPress);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Image = global::CarRental.Properties.Resources.Add_Person_White;
+            this.button1.Location = new System.Drawing.Point(1136, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 45);
+            this.button1.TabIndex = 10;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -315,126 +430,11 @@
             "Phone",
             "Gmail",
             "Gendor"});
-            this.cbFilter.Location = new System.Drawing.Point(113, 7);
+            this.cbFilter.Location = new System.Drawing.Point(112, 14);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(288, 40);
             this.cbFilter.TabIndex = 12;
             this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Image = global::CarRental.Properties.Resources.Add_Person_White;
-            this.button1.Location = new System.Drawing.Point(1137, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 45);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnFirstPage
-            // 
-            this.btnFirstPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnFirstPage.FlatAppearance.BorderSize = 0;
-            this.btnFirstPage.Image = global::CarRental.Properties.Resources.fast_rewind;
-            this.btnFirstPage.Location = new System.Drawing.Point(3, 3);
-            this.btnFirstPage.Name = "btnFirstPage";
-            this.btnFirstPage.Size = new System.Drawing.Size(55, 45);
-            this.btnFirstPage.TabIndex = 4;
-            this.btnFirstPage.UseVisualStyleBackColor = false;
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnPrevious.FlatAppearance.BorderSize = 0;
-            this.btnPrevious.Image = global::CarRental.Properties.Resources.arrow_back;
-            this.btnPrevious.Location = new System.Drawing.Point(64, 3);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnPrevious.Size = new System.Drawing.Size(55, 45);
-            this.btnPrevious.TabIndex = 3;
-            this.btnPrevious.UseVisualStyleBackColor = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.Image = global::CarRental.Properties.Resources.arrow_forward;
-            this.btnNext.Location = new System.Drawing.Point(259, 3);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnNext.Size = new System.Drawing.Size(55, 45);
-            this.btnNext.TabIndex = 5;
-            this.btnNext.UseVisualStyleBackColor = false;
-            // 
-            // btnLastPage
-            // 
-            this.btnLastPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnLastPage.FlatAppearance.BorderSize = 0;
-            this.btnLastPage.Image = global::CarRental.Properties.Resources.fast_next_page;
-            this.btnLastPage.Location = new System.Drawing.Point(320, 3);
-            this.btnLastPage.Name = "btnLastPage";
-            this.btnLastPage.Size = new System.Drawing.Size(55, 45);
-            this.btnLastPage.TabIndex = 6;
-            this.btnLastPage.UseVisualStyleBackColor = false;
-            // 
-            // showPeopleInfoToolStripMenuItem
-            // 
-            this.showPeopleInfoToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_Info;
-            this.showPeopleInfoToolStripMenuItem.Name = "showPeopleInfoToolStripMenuItem";
-            this.showPeopleInfoToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
-            this.showPeopleInfoToolStripMenuItem.Text = "Show PersonInfo";
-            this.showPeopleInfoToolStripMenuItem.Click += new System.EventHandler(this.showPeopleInfoToolStripMenuItem_Click);
-            // 
-            // addNewPersonToolStripMenuItem
-            // 
-            this.addNewPersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.Add_Person_Black;
-            this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
-            this.addNewPersonToolStripMenuItem.Text = "Add new Person";
-            this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.addNewPersonToolStripMenuItem_Click);
-            // 
-            // editPersonToolStripMenuItem
-            // 
-            this.editPersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_edit;
-            this.editPersonToolStripMenuItem.Name = "editPersonToolStripMenuItem";
-            this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
-            this.editPersonToolStripMenuItem.Text = "Edit Person";
-            this.editPersonToolStripMenuItem.Click += new System.EventHandler(this.editPersonToolStripMenuItem_Click);
-            // 
-            // deletePersonToolStripMenuItem
-            // 
-            this.deletePersonToolStripMenuItem.Image = global::CarRental.Properties.Resources.person_cancel_;
-            this.deletePersonToolStripMenuItem.Name = "deletePersonToolStripMenuItem";
-            this.deletePersonToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
-            this.deletePersonToolStripMenuItem.Text = "Delete Person";
-            this.deletePersonToolStripMenuItem.Click += new System.EventHandler(this.deletePersonToolStripMenuItem_Click);
-            // 
-            // makeItAsUserToolStripMenuItem
-            // 
-            this.makeItAsUserToolStripMenuItem.Image = global::CarRental.Properties.Resources.admin_panel;
-            this.makeItAsUserToolStripMenuItem.Name = "makeItAsUserToolStripMenuItem";
-            this.makeItAsUserToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
-            this.makeItAsUserToolStripMenuItem.Text = "Make as User";
-            // 
-            // makeHimAsCustomerToolStripMenuItem
-            // 
-            this.makeHimAsCustomerToolStripMenuItem.Image = global::CarRental.Properties.Resources.identity_platform;
-            this.makeHimAsCustomerToolStripMenuItem.Name = "makeHimAsCustomerToolStripMenuItem";
-            this.makeHimAsCustomerToolStripMenuItem.Size = new System.Drawing.Size(258, 36);
-            this.makeHimAsCustomerToolStripMenuItem.Text = "Make him as Customer";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Image = global::CarRental.Properties.Resources.People_Black;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(74, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // frmPeopleList
             // 
@@ -456,6 +456,7 @@
             this.Load += new System.EventHandler(this.frmPeopleList_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -468,7 +469,6 @@
             this.panel1.PerformLayout();
             this.PnlGendor.ResumeLayout(false);
             this.PnlGendor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

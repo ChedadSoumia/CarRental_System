@@ -1,4 +1,5 @@
-﻿using CarRental.Dashboard;
+﻿using CarRental.Customers;
+using CarRental.Dashboard;
 using CarRental.People;
 using CarRental.Users;
 using System;
@@ -48,10 +49,9 @@ namespace CarRental
             _LoadForm(new frmDashboard());
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-            tableLayoutPanel1.Visible = !tableLayoutPanel1.Visible;
+            _LoadForm(new frmCustomersList());
         }
     }
 }

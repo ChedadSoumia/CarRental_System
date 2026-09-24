@@ -153,6 +153,36 @@ namespace CarRental.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car_fan_recirculate_2_34dp_16__18__18_FILL0_wght400_GRAD0_opsz40 {
+            get {
+                object obj = ResourceManager.GetObject("car_fan_recirculate_2_34dp_16, 18, 18_FILL0_wght400_GRAD0_opsz40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap car_rental_Black {
+            get {
+                object obj = ResourceManager.GetObject("car_rental_Black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap car_rental_WHITE {
+            get {
+                object obj = ResourceManager.GetObject("car_rental_WHITE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cars_white {
             get {
                 object obj = ResourceManager.GetObject("cars_white", resourceCulture);
@@ -356,6 +386,16 @@ namespace CarRental.Properties {
         internal static System.Drawing.Bitmap person_cancel_ {
             get {
                 object obj = ResourceManager.GetObject("person_cancel_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap person_checkBlack {
+            get {
+                object obj = ResourceManager.GetObject("person_checkBlack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

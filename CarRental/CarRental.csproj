@@ -48,6 +48,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Customers\ctrlCustomerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\ctrlCustomerInfo.Designer.cs">
+      <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmAddEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmAddEditCustomer.Designer.cs">
+      <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmCustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmCustomerInfo.Designer.cs">
+      <DependentUpon>frmCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\frmCustomersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmCustomersList.Designer.cs">
+      <DependentUpon>frmCustomersList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +150,18 @@
     <Compile Include="Users\frmUsersList.Designer.cs">
       <DependentUpon>frmUsersList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Customers\ctrlCustomerInfo.resx">
+      <DependentUpon>ctrlCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmAddEditCustomer.resx">
+      <DependentUpon>frmAddEditCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmCustomerInfo.resx">
+      <DependentUpon>frmCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmCustomersList.resx">
+      <DependentUpon>frmCustomersList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +329,17 @@
   <ItemGroup>
     <None Include="Resources\iWoman.png" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Include="Resources\person_checkBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_rental_Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_rental_WHITE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_fan_recirculate_2_34dp_16, 18, 18_FILL0_wght400_GRAD0_opsz40.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
