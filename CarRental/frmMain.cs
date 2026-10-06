@@ -1,7 +1,9 @@
 ﻿using CarRental.Customers;
 using CarRental.Dashboard;
+using CarRental.Maintenance;
 using CarRental.People;
 using CarRental.Users;
+using CarRental.Vehicle;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,9 +51,25 @@ namespace CarRental
             _LoadForm(new frmDashboard());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCustomers_Click(object sender, EventArgs e)
         {
             _LoadForm(new frmCustomersList());
+        }
+
+        private void btnVehicle_Click(object sender, EventArgs e)
+        {
+            _LoadForm(new frmVehicleList());
+        }
+
+        private void btnMaintenance_Click(object sender, EventArgs e)
+        {
+            _LoadForm(new frmMaintenanceList());
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            frmChangePassword changePassword = new frmChangePassword();
+            changePassword.ShowDialog();
         }
     }
 }

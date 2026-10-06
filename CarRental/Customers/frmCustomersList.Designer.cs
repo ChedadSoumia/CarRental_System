@@ -110,7 +110,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27718F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.72282F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -125,7 +125,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.txtFilter);
-            this.panel1.Location = new System.Drawing.Point(471, 3);
+            this.panel1.Location = new System.Drawing.Point(465, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 48);
             this.panel1.TabIndex = 10;
@@ -143,7 +143,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Image = global::CarRental.Properties.Resources.Add_Person_White;
-            this.button1.Location = new System.Drawing.Point(1133, 3);
+            this.button1.Location = new System.Drawing.Point(1127, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 45);
             this.button1.TabIndex = 10;
@@ -172,7 +172,7 @@
             "Phone",
             "National No",
             "Driver License Number"});
-            this.cbFilter.Location = new System.Drawing.Point(112, 14);
+            this.cbFilter.Location = new System.Drawing.Point(110, 14);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(288, 40);
             this.cbFilter.TabIndex = 12;
@@ -287,7 +287,7 @@
             this.makeItAsUserToolStripMenuItem,
             this.makeHimAsCustomerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(239, 260);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(239, 232);
             // 
             // showPeopleInfoToolStripMenuItem
             // 

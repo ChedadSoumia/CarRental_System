@@ -29,18 +29,21 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnMaintenance = new System.Windows.Forms.Button();
+            this.btnVehicle = new System.Windows.Forms.Button();
+            this.btnCustomers = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnPeople = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,21 +56,13 @@
             this.panel1.Size = new System.Drawing.Size(1314, 47);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::CarRental.Properties.Resources.iMan;
-            this.pictureBox1.Location = new System.Drawing.Point(1221, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(61, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnMaintenance);
+            this.panel2.Controls.Add(this.btnVehicle);
+            this.panel2.Controls.Add(this.btnCustomers);
             this.panel2.Controls.Add(this.btnChangePassword);
             this.panel2.Controls.Add(this.btnLogout);
             this.panel2.Controls.Add(this.btnUsers);
@@ -79,22 +74,91 @@
             this.panel2.Size = new System.Drawing.Size(206, 1055);
             this.panel2.TabIndex = 1;
             // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(206, 47);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1314, 1008);
+            this.panel4.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::CarRental.Properties.Resources.iMan;
+            this.pictureBox1.Location = new System.Drawing.Point(1221, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::CarRental.Properties.Resources.how_to_reg1;
+            this.button1.Image = global::CarRental.Properties.Resources.table_view_white;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(-3, 302);
+            this.button1.Location = new System.Drawing.Point(3, 472);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(206, 51);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Customers";
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Report";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnMaintenance
+            // 
+            this.btnMaintenance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnMaintenance.FlatAppearance.BorderSize = 0;
+            this.btnMaintenance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaintenance.ForeColor = System.Drawing.Color.White;
+            this.btnMaintenance.Image = global::CarRental.Properties.Resources.car_gear_white;
+            this.btnMaintenance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaintenance.Location = new System.Drawing.Point(0, 415);
+            this.btnMaintenance.Name = "btnMaintenance";
+            this.btnMaintenance.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnMaintenance.Size = new System.Drawing.Size(206, 51);
+            this.btnMaintenance.TabIndex = 5;
+            this.btnMaintenance.Text = "Maintenance";
+            this.btnMaintenance.UseVisualStyleBackColor = false;
+            this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click);
+            // 
+            // btnVehicle
+            // 
+            this.btnVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnVehicle.FlatAppearance.BorderSize = 0;
+            this.btnVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVehicle.ForeColor = System.Drawing.Color.White;
+            this.btnVehicle.Image = global::CarRental.Properties.Resources.cars_white;
+            this.btnVehicle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVehicle.Location = new System.Drawing.Point(0, 358);
+            this.btnVehicle.Name = "btnVehicle";
+            this.btnVehicle.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnVehicle.Size = new System.Drawing.Size(206, 51);
+            this.btnVehicle.TabIndex = 4;
+            this.btnVehicle.Text = "Vehicle";
+            this.btnVehicle.UseVisualStyleBackColor = false;
+            this.btnVehicle.Click += new System.EventHandler(this.btnVehicle_Click);
+            // 
+            // btnCustomers
+            // 
+            this.btnCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnCustomers.FlatAppearance.BorderSize = 0;
+            this.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomers.ForeColor = System.Drawing.Color.White;
+            this.btnCustomers.Image = global::CarRental.Properties.Resources.how_to_reg1;
+            this.btnCustomers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomers.Location = new System.Drawing.Point(-3, 302);
+            this.btnCustomers.Name = "btnCustomers";
+            this.btnCustomers.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnCustomers.Size = new System.Drawing.Size(206, 51);
+            this.btnCustomers.TabIndex = 3;
+            this.btnCustomers.Text = "Customers";
+            this.btnCustomers.UseVisualStyleBackColor = false;
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // btnChangePassword
             // 
@@ -104,12 +168,13 @@
             this.btnChangePassword.ForeColor = System.Drawing.Color.White;
             this.btnChangePassword.Image = global::CarRental.Properties.Resources.passwordWhite;
             this.btnChangePassword.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChangePassword.Location = new System.Drawing.Point(-3, 963);
+            this.btnChangePassword.Location = new System.Drawing.Point(0, 758);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(203, 41);
             this.btnChangePassword.TabIndex = 0;
             this.btnChangePassword.Text = "       Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnLogout
             // 
@@ -119,7 +184,7 @@
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::CarRental.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 1010);
+            this.btnLogout.Location = new System.Drawing.Point(3, 805);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(203, 41);
             this.btnLogout.TabIndex = 1;
@@ -177,14 +242,6 @@
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(206, 47);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1314, 1008);
-            this.panel4.TabIndex = 2;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -203,8 +260,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,6 +277,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnCustomers;
+        private System.Windows.Forms.Button btnVehicle;
+        private System.Windows.Forms.Button btnMaintenance;
         private System.Windows.Forms.Button button1;
     }
 }
