@@ -329,7 +329,7 @@ namespace CarRental_DataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = "SELECT Found=1 FROM Users WHERE PersonID = @PersonID";
+            string query = "SELECT Found=1 FROM Users WHERE person_id = @PersonID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -363,7 +363,7 @@ namespace CarRental_DataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
-            string query = @"INSERT INTO Users (PersonID, UserName, Password,IsActive)
+            string query = @"INSERT INTO Users (person_id, username, password,is_active)
                              VALUES (@PersonID, @UserName, @Password,@IsActive);
                              SELECT SCOPE_IDENTITY();";
 
@@ -406,10 +406,10 @@ namespace CarRental_DataAccess
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"Update  Users  
-                            set PersonID = @PersonID,
-                                UserName = @UserName,
-                                Password = @Password,
-                                IsActive = @IsActive
+                            set person_id = @PersonID,
+                                username = @UserName,
+                                password = @Password,
+                                is_active = @IsActive
                                 where UserID = @UserID";
 
             SqlCommand command = new SqlCommand(query, connection);

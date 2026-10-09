@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbIsActive = new System.Windows.Forms.ComboBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnAddNewUser = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCountRecord = new System.Windows.Forms.Label();
-            this.cbIsActive = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -75,7 +75,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27718F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.72282F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 695F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAddNewUser, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -91,10 +91,24 @@
             // 
             this.panel1.Controls.Add(this.cbIsActive);
             this.panel1.Controls.Add(this.txtFilter);
-            this.panel1.Location = new System.Drawing.Point(464, 3);
+            this.panel1.Location = new System.Drawing.Point(463, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 48);
             this.panel1.TabIndex = 10;
+            // 
+            // cbIsActive
+            // 
+            this.cbIsActive.FormattingEnabled = true;
+            this.cbIsActive.Items.AddRange(new object[] {
+            "All",
+            "Active",
+            "Not active"});
+            this.cbIsActive.Location = new System.Drawing.Point(4, 1);
+            this.cbIsActive.Name = "cbIsActive";
+            this.cbIsActive.Size = new System.Drawing.Size(200, 40);
+            this.cbIsActive.TabIndex = 14;
+            this.cbIsActive.Visible = false;
+            this.cbIsActive.SelectedIndexChanged += new System.EventHandler(this.cbIsActive_SelectedIndexChanged);
             // 
             // txtFilter
             // 
@@ -112,7 +126,7 @@
             this.btnAddNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btnAddNewUser.FlatAppearance.BorderSize = 0;
             this.btnAddNewUser.Image = global::CarRental.Properties.Resources.how_to_reg;
-            this.btnAddNewUser.Location = new System.Drawing.Point(1159, 3);
+            this.btnAddNewUser.Location = new System.Drawing.Point(1158, 3);
             this.btnAddNewUser.Name = "btnAddNewUser";
             this.btnAddNewUser.Size = new System.Drawing.Size(53, 45);
             this.btnAddNewUser.TabIndex = 10;
@@ -140,7 +154,7 @@
             "Full name",
             "Username",
             "Active"});
-            this.cbFilter.Location = new System.Drawing.Point(110, 7);
+            this.cbFilter.Location = new System.Drawing.Point(110, 14);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(288, 40);
             this.cbFilter.TabIndex = 12;
@@ -256,7 +270,7 @@
             this.DeactiveUserToolStripMenuItem,
             this.changePasswordToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(223, 260);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(223, 232);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showPeopleInfoToolStripMenuItem
@@ -384,20 +398,6 @@
             this.lblCountRecord.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCountRecord.Size = new System.Drawing.Size(10, 32);
             this.lblCountRecord.TabIndex = 6;
-            // 
-            // cbIsActive
-            // 
-            this.cbIsActive.FormattingEnabled = true;
-            this.cbIsActive.Items.AddRange(new object[] {
-            "All",
-            "Active",
-            "Not active"});
-            this.cbIsActive.Location = new System.Drawing.Point(4, 1);
-            this.cbIsActive.Name = "cbIsActive";
-            this.cbIsActive.Size = new System.Drawing.Size(200, 40);
-            this.cbIsActive.TabIndex = 14;
-            this.cbIsActive.Visible = false;
-            this.cbIsActive.SelectedIndexChanged += new System.EventHandler(this.cbIsActive_SelectedIndexChanged);
             // 
             // frmUsersList
             // 

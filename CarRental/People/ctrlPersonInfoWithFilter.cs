@@ -59,7 +59,6 @@ namespace CarRental.People
             }
 
         }
-
         private void btnFilter_Click(object sender, EventArgs e)
         {
             if (txtFilter.Text  == "")
@@ -69,7 +68,6 @@ namespace CarRental.People
             }
             _FindNow();
         }
-
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
             if(txtFilter.Text == "")
@@ -81,7 +79,6 @@ namespace CarRental.People
                 btnFilter.Enabled = true;
             }
         }
-
         private void txtFilter_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -90,23 +87,40 @@ namespace CarRental.People
             }
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
         private void ctrlPersonInfoWithFilter_Load(object sender, EventArgs e)
         {
             txtFilter.Focus();
         }
-
         public void FilterFocus()
         {
             txtFilter.Focus();
         }
+        public void LoadPersonInfo(int PersonID)
+        {
+            txtFilter.Text = PersonID.ToString();
+            _FindNow();
 
+        }
         private void btnAddNewPerson_Click_1(object sender, EventArgs e)
         {
             frmAddEditPerson addNewPerson = new frmAddEditPerson();
             // Subsecribe to delegeate on AddEdirPerson From to get the new person id after adding a new person
-            //addNewPerson.DataBack += DataBackEvent;
+            addNewPerson.DataBack += AddNewPerson_DataBack;
             addNewPerson.ShowDialog();
+        }
+
+        private void AddNewPerson_DataBack(object sender, int PersonID)
+        {
+            txtFilter.Text = PersonID.ToString();
+            ctrlPersonInfo1.LoadPersonInfo(PersonID);
+
+        }
+
+        public void ResetPersonInfo()
+        {
+            ctrlPersonInfo1.ResetPersonInfo();
+            txtFilter.Text = "";
+            txtFilter.Focus();
         }
     }
 }

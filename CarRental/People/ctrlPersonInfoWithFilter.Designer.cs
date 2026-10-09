@@ -32,8 +32,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.btnFilter = new System.Windows.Forms.Button();
-            this.ctrlPersonInfo1 = new CarRental.People.ctrlPersonInfo();
             this.btnAddNewPerson = new System.Windows.Forms.Button();
+            this.ctrlPersonInfo1 = new CarRental.People.ctrlPersonInfo();
             this.gbFilters.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,18 @@
             this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
+            // btnAddNewPerson
+            // 
+            this.btnAddNewPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnAddNewPerson.FlatAppearance.BorderSize = 0;
+            this.btnAddNewPerson.Image = global::CarRental.Properties.Resources.Add_Person_White;
+            this.btnAddNewPerson.Location = new System.Drawing.Point(658, 18);
+            this.btnAddNewPerson.Name = "btnAddNewPerson";
+            this.btnAddNewPerson.Size = new System.Drawing.Size(55, 45);
+            this.btnAddNewPerson.TabIndex = 16;
+            this.btnAddNewPerson.UseVisualStyleBackColor = false;
+            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click_1);
+            // 
             // ctrlPersonInfo1
             // 
             this.ctrlPersonInfo1.BackColor = System.Drawing.Color.White;
@@ -98,22 +110,10 @@
             this.ctrlPersonInfo1.Size = new System.Drawing.Size(731, 363);
             this.ctrlPersonInfo1.TabIndex = 0;
             // 
-            // btnAddNewPerson
-            // 
-            this.btnAddNewPerson.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAddNewPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnAddNewPerson.FlatAppearance.BorderSize = 0;
-            this.btnAddNewPerson.Image = global::CarRental.Properties.Resources.Add_Person_White;
-            this.btnAddNewPerson.Location = new System.Drawing.Point(661, 19);
-            this.btnAddNewPerson.Name = "btnAddNewPerson";
-            this.btnAddNewPerson.Size = new System.Drawing.Size(55, 45);
-            this.btnAddNewPerson.TabIndex = 16;
-            this.btnAddNewPerson.UseVisualStyleBackColor = false;
-            this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click_1);
-            // 
             // ctrlPersonInfoWithFilter
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnAddNewPerson);
             this.Controls.Add(this.gbFilters);

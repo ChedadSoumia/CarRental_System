@@ -19,25 +19,25 @@ namespace CarRental_business
         public int PersonID { get; set; }
         public clsPerson clsPerson;
         public string UserName { get; set; }
-        public string Password { get; set; }
+        private string _HashPassword;
         public bool IsActive { get; set; }
         public clsUser()
         {
             this.UserID = -1; 
             this.PersonID= -1;
             this.UserName = "";
-            this.Password = "";
+            this._HashPassword = "";
             this.IsActive = false;
 
             _Mode = _enMode.AddNew;
         }
-        public clsUser(int UserId,int PersonId, string Username, string Password, bool IsActive)
+        private clsUser(int UserId,int PersonId, string Username, string Password, bool IsActive)
         {
             this.UserID = UserId;
             this.PersonID = PersonId;
             clsPerson = clsPerson.Find(PersonId);
             this.UserName = Username;
-            this.Password = Password;
+            this._HashPassword = Password;
             this.IsActive = IsActive;
 
             _Mode = _enMode.Update;
@@ -45,14 +45,14 @@ namespace CarRental_business
         public static clsUser Find(int UserID)
         {
             int PersonID = -1;
-            string Username = "", Password = "";
+            string Username = "", HashPassword = "";
             bool IsActive = false;
 
-            bool isFound = clsUserData.GetUserInfoByID(UserID, ref PersonID,ref Username, ref Password, ref IsActive);
+            bool isFound = clsUserData.GetUserInfoByID(UserID, ref PersonID,ref Username, ref HashPassword, ref IsActive);
 
             if (isFound)
             {
-                return new clsUser(UserID,PersonID,Username,Password,IsActive);
+                return new clsUser(UserID,PersonID,Username,HashPassword,IsActive);
             }
             else
             {
@@ -128,20 +128,22 @@ namespace CarRental_business
         public static bool PersonIsUser(int PersonID){
             return clsUserData.IsUserExistForPersonID(PersonID);
         }
-        private bool _AddNewUser()
+        private bool _AddNewUser(string Password)
         {
-            this.UserID = clsUserData.AddNewUser(this.PersonID, this.UserName, this.Password, this.IsActive);
+            this._HashPassword = clsSecurity.ComputeHash(Password);
+            this.UserID = clsUserData.AddNewUser(this.PersonID, this.UserName, this._HashPassword, this.IsActive);
             return (this.UserID != -1);
         }
-        private bool _UpdateUser()
+        private bool _UpdateUser(string Password)
         {
-            return clsUserData.UpdateUser(this.UserID,this.PersonID,this.UserName,this.Password,this.IsActive);
+            this._HashPassword = clsSecurity.ComputeHash(Password);
+            return clsUserData.UpdateUser(this.UserID,this.PersonID,this.UserName,this._HashPassword,this.IsActive);
         }
-        public bool Save()
+        public bool Save(string Password)
         {
             switch(_Mode){
                 case _enMode.AddNew:
-                    if (_AddNewUser())
+                    if (_AddNewUser(Password))
                     {
                         _Mode = _enMode.Update;
                         return true;
@@ -152,13 +154,13 @@ namespace CarRental_business
                     }
 
                 case _enMode.Update:
-                    return _UpdateUser();
+                    return _UpdateUser(Password);
             }
             return false;
         }
         public bool ChangePassword()
         {
-            return clsUserData.ChangePassword(this.UserID, this.Password);
+            return clsUserData.ChangePassword(this.UserID, this._HashPassword);
         }
         public static bool Deactivate(int UserId)
         {

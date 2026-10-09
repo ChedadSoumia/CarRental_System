@@ -1,12 +1,7 @@
 ﻿using CarRental_business;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CarRental.Users
@@ -221,6 +216,7 @@ namespace CarRental.Users
         {
             frmAddEditUser addEditUser = new frmAddEditUser((int)dgvAllUsers.CurrentRow.Cells[0].Value);
             addEditUser.ShowDialog();
+            _RefreshUserList();
         }
     }
 }
