@@ -10,7 +10,7 @@ namespace CarRental_DataAccess
 {
     public static class clsEventLog
     {
-        private static string _source = "DVLDApp";
+        private static string _source = "CarRentalApp";
 
         
         static clsEventLog()

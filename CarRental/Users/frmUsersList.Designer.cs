@@ -50,7 +50,7 @@
             this.editPersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deletePersonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.makeItAsUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeactiveUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.lblCountRecord = new System.Windows.Forms.Label();
+            this.cbIsActive = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -74,7 +75,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27718F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.72282F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 695F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAddNewUser, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -88,8 +89,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbIsActive);
             this.panel1.Controls.Add(this.txtFilter);
-            this.panel1.Location = new System.Drawing.Point(465, 3);
+            this.panel1.Location = new System.Drawing.Point(464, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 48);
             this.panel1.TabIndex = 10;
@@ -101,13 +103,16 @@
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(278, 39);
             this.txtFilter.TabIndex = 13;
+            this.txtFilter.Visible = false;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter_KeyPress);
             // 
             // btnAddNewUser
             // 
             this.btnAddNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btnAddNewUser.FlatAppearance.BorderSize = 0;
             this.btnAddNewUser.Image = global::CarRental.Properties.Resources.how_to_reg;
-            this.btnAddNewUser.Location = new System.Drawing.Point(1160, 3);
+            this.btnAddNewUser.Location = new System.Drawing.Point(1159, 3);
             this.btnAddNewUser.Name = "btnAddNewUser";
             this.btnAddNewUser.Size = new System.Drawing.Size(53, 45);
             this.btnAddNewUser.TabIndex = 10;
@@ -133,11 +138,13 @@
             "User ID",
             "Person ID",
             "Full name",
+            "Username",
             "Active"});
-            this.cbFilter.Location = new System.Drawing.Point(110, 14);
+            this.cbFilter.Location = new System.Drawing.Point(110, 7);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(288, 40);
             this.cbFilter.TabIndex = 12;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -246,10 +253,11 @@
             this.editPersonToolStripMenuItem,
             this.deletePersonToolStripMenuItem,
             this.toolStripMenuItem2,
-            this.makeItAsUserToolStripMenuItem,
+            this.DeactiveUserToolStripMenuItem,
             this.changePasswordToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(223, 232);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(223, 260);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showPeopleInfoToolStripMenuItem
             // 
@@ -278,6 +286,7 @@
             this.editPersonToolStripMenuItem.Name = "editPersonToolStripMenuItem";
             this.editPersonToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
             this.editPersonToolStripMenuItem.Text = "Edit User";
+            this.editPersonToolStripMenuItem.Click += new System.EventHandler(this.editPersonToolStripMenuItem_Click);
             // 
             // deletePersonToolStripMenuItem
             // 
@@ -285,18 +294,20 @@
             this.deletePersonToolStripMenuItem.Name = "deletePersonToolStripMenuItem";
             this.deletePersonToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
             this.deletePersonToolStripMenuItem.Text = "Delete User";
+            this.deletePersonToolStripMenuItem.Click += new System.EventHandler(this.deletePersonToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(219, 6);
             // 
-            // makeItAsUserToolStripMenuItem
+            // DeactiveUserToolStripMenuItem
             // 
-            this.makeItAsUserToolStripMenuItem.Image = global::CarRental.Properties.Resources.safety_check_off;
-            this.makeItAsUserToolStripMenuItem.Name = "makeItAsUserToolStripMenuItem";
-            this.makeItAsUserToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
-            this.makeItAsUserToolStripMenuItem.Text = "Desactivate";
+            this.DeactiveUserToolStripMenuItem.Image = global::CarRental.Properties.Resources.safety_check_off;
+            this.DeactiveUserToolStripMenuItem.Name = "DeactiveUserToolStripMenuItem";
+            this.DeactiveUserToolStripMenuItem.Size = new System.Drawing.Size(222, 36);
+            this.DeactiveUserToolStripMenuItem.Text = "Desactivate";
+            this.DeactiveUserToolStripMenuItem.Click += new System.EventHandler(this.makeItAsUserToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
@@ -374,6 +385,20 @@
             this.lblCountRecord.Size = new System.Drawing.Size(10, 32);
             this.lblCountRecord.TabIndex = 6;
             // 
+            // cbIsActive
+            // 
+            this.cbIsActive.FormattingEnabled = true;
+            this.cbIsActive.Items.AddRange(new object[] {
+            "All",
+            "Active",
+            "Not active"});
+            this.cbIsActive.Location = new System.Drawing.Point(4, 1);
+            this.cbIsActive.Name = "cbIsActive";
+            this.cbIsActive.Size = new System.Drawing.Size(200, 40);
+            this.cbIsActive.TabIndex = 14;
+            this.cbIsActive.Visible = false;
+            this.cbIsActive.SelectedIndexChanged += new System.EventHandler(this.cbIsActive_SelectedIndexChanged);
+            // 
             // frmUsersList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -391,6 +416,7 @@
             this.Name = "frmUsersList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Users List";
+            this.Load += new System.EventHandler(this.frmUsersList_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -436,7 +462,8 @@
         private System.Windows.Forms.ToolStripMenuItem editPersonToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deletePersonToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem makeItAsUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DeactiveUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ComboBox cbIsActive;
     }
 }

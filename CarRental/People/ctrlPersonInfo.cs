@@ -95,6 +95,7 @@ namespace CarRental.People
         {
             frmAddEditPerson EditPerson = new frmAddEditPerson(_PersonID);
             EditPerson.ShowDialog();
+            LoadPersonInfo(_PersonID);
         }
     }
 }

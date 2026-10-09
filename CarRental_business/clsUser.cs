@@ -160,6 +160,10 @@ namespace CarRental_business
         {
             return clsUserData.ChangePassword(this.UserID, this.Password);
         }
+        public static bool Deactivate(int UserId)
+        {
+            return clsUserData.Deactivate(UserId);
+        }
 
     
     }

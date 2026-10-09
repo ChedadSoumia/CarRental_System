@@ -476,7 +476,39 @@ namespace CarRental_DataAccess
             return (rowsAffected > 0);
         }
 
-     
+        public static bool Deactivate(int UserId)
+        {
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"Update  Users  
+                            set is_active = 0
+                                where user_id = @UserID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@UserID", UserId);
+
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                clsEventLog.LogError("Error Deacive User!",ex);
+                return false;
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
 
 
     }

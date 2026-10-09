@@ -45,7 +45,7 @@
             this.txtMileage = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pbPersonImage = new System.Windows.Forms.PictureBox();
+            this.pbVehicleImage = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.txtMake = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,7 +64,7 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVehicleImage)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -259,16 +259,16 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Mileage";
             // 
-            // pbPersonImage
+            // pbVehicleImage
             // 
-            this.pbPersonImage.Image = global::CarRental.Properties.Resources.icon_375845;
-            this.pbPersonImage.Location = new System.Drawing.Point(410, 176);
-            this.pbPersonImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.pbPersonImage.Name = "pbPersonImage";
-            this.pbPersonImage.Size = new System.Drawing.Size(290, 227);
-            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbPersonImage.TabIndex = 20;
-            this.pbPersonImage.TabStop = false;
+            this.pbVehicleImage.Image = global::CarRental.Properties.Resources.icon_375845;
+            this.pbVehicleImage.Location = new System.Drawing.Point(410, 176);
+            this.pbVehicleImage.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.pbVehicleImage.Name = "pbVehicleImage";
+            this.pbVehicleImage.Size = new System.Drawing.Size(290, 227);
+            this.pbVehicleImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbVehicleImage.TabIndex = 20;
+            this.pbVehicleImage.TabStop = false;
             // 
             // tableLayoutPanel4
             // 
@@ -432,7 +432,7 @@
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.llSetImage);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.pbPersonImage);
+            this.Controls.Add(this.pbVehicleImage);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Cairo", 10.2F);
@@ -451,7 +451,7 @@
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbVehicleImage)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
@@ -478,7 +478,7 @@
         private System.Windows.Forms.TextBox txtMileage;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pbPersonImage;
+        private System.Windows.Forms.PictureBox pbVehicleImage;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TextBox txtMake;
         private System.Windows.Forms.Label label6;

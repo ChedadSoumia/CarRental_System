@@ -30,7 +30,12 @@
         {
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpPersonInfo = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.ctrlPersonInfoWithFilter1 = new CarRental.People.ctrlPersonInfoWithFilter();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,13 +47,8 @@
             this.txtConfirmPasssword = new System.Windows.Forms.TextBox();
             this.chkbIsActive = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.ctrlPersonInfoWithFilter1 = new CarRental.People.ctrlPersonInfoWithFilter();
+            this.lblMainTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tcUserInfo.SuspendLayout();
             this.tpPersonInfo.SuspendLayout();
             this.tpLoginInfo.SuspendLayout();
@@ -79,6 +79,34 @@
             this.tpPersonInfo.TabIndex = 0;
             this.tpPersonInfo.Text = "Person Info";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.button1.Image = global::CarRental.Properties.Resources.arrow_next2;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(640, 472);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(135, 45);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Next";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // ctrlPersonInfoWithFilter1
+            // 
+            this.ctrlPersonInfoWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrlPersonInfoWithFilter1.FilterEnable = true;
+            this.ctrlPersonInfoWithFilter1.Location = new System.Drawing.Point(50, 15);
+            this.ctrlPersonInfoWithFilter1.Name = "ctrlPersonInfoWithFilter1";
+            this.ctrlPersonInfoWithFilter1.Size = new System.Drawing.Size(742, 447);
+            this.ctrlPersonInfoWithFilter1.TabIndex = 0;
+            // 
             // tpLoginInfo
             // 
             this.tpLoginInfo.Controls.Add(this.btnPrevious);
@@ -92,6 +120,59 @@
             this.tpLoginInfo.TabIndex = 1;
             this.tpLoginInfo.Text = "Login Info";
             this.tpLoginInfo.UseVisualStyleBackColor = true;
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.White;
+            this.btnPrevious.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnPrevious.FlatAppearance.BorderSize = 3;
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnPrevious.Image = global::CarRental.Properties.Resources.arrow_back1;
+            this.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrevious.Location = new System.Drawing.Point(17, 431);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnPrevious.Size = new System.Drawing.Size(135, 45);
+            this.btnPrevious.TabIndex = 15;
+            this.btnPrevious.Text = "PREVIOUS";
+            this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.White;
+            this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnReset.FlatAppearance.BorderSize = 3;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnReset.Image = global::CarRental.Properties.Resources.filter_none_black;
+            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReset.Location = new System.Drawing.Point(482, 427);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnReset.Size = new System.Drawing.Size(144, 45);
+            this.btnReset.TabIndex = 14;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = global::CarRental.Properties.Resources.save_White;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(632, 431);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnSave.Size = new System.Drawing.Size(144, 45);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "SAVE";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -212,7 +293,7 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.83969F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 84.16031F));
-            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblMainTitle, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(38, 28);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -221,108 +302,27 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(524, 64);
             this.tableLayoutPanel2.TabIndex = 11;
             // 
-            // label2
+            // lblMainTitle
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cairo", 20.2F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(86, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 64);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Add new user";
-            // 
-            // ctrlPersonInfoWithFilter1
-            // 
-            this.ctrlPersonInfoWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlPersonInfoWithFilter1.FilterEnable = true;
-            this.ctrlPersonInfoWithFilter1.Location = new System.Drawing.Point(50, 15);
-            this.ctrlPersonInfoWithFilter1.Name = "ctrlPersonInfoWithFilter1";
-            this.ctrlPersonInfoWithFilter1.Size = new System.Drawing.Size(742, 447);
-            this.ctrlPersonInfoWithFilter1.TabIndex = 0;
+            this.lblMainTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblMainTitle.AutoSize = true;
+            this.lblMainTitle.Font = new System.Drawing.Font("Cairo", 20.2F, System.Drawing.FontStyle.Bold);
+            this.lblMainTitle.Location = new System.Drawing.Point(85, 0);
+            this.lblMainTitle.Name = "lblMainTitle";
+            this.lblMainTitle.Size = new System.Drawing.Size(228, 64);
+            this.lblMainTitle.TabIndex = 0;
+            this.lblMainTitle.Text = "Add new user";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox1.Image = global::CarRental.Properties.Resources.identity_platform;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(5, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.BackColor = System.Drawing.Color.White;
-            this.btnPrevious.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnPrevious.FlatAppearance.BorderSize = 3;
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnPrevious.Image = global::CarRental.Properties.Resources.arrow_back1;
-            this.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrevious.Location = new System.Drawing.Point(17, 431);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnPrevious.Size = new System.Drawing.Size(135, 45);
-            this.btnPrevious.TabIndex = 15;
-            this.btnPrevious.Text = "PREVIOUS";
-            this.btnPrevious.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrevious.UseVisualStyleBackColor = false;
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.White;
-            this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnReset.FlatAppearance.BorderSize = 3;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnReset.Image = global::CarRental.Properties.Resources.filter_none_black;
-            this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(482, 427);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnReset.Size = new System.Drawing.Size(144, 45);
-            this.btnReset.TabIndex = 14;
-            this.btnReset.Text = "RESET";
-            this.btnReset.UseVisualStyleBackColor = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = global::CarRental.Properties.Resources.save_White;
-            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(632, 431);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnSave.Size = new System.Drawing.Size(144, 45);
-            this.btnSave.TabIndex = 13;
-            this.btnSave.Text = "SAVE";
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.button1.Image = global::CarRental.Properties.Resources.arrow_next2;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(640, 472);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(135, 45);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Next";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // frmAddEditUser
             // 
@@ -337,6 +337,7 @@
             this.Name = "frmAddEditUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New User";
+            this.Load += new System.EventHandler(this.frmAddEditUser_Load);
             this.tcUserInfo.ResumeLayout(false);
             this.tpPersonInfo.ResumeLayout(false);
             this.tpLoginInfo.ResumeLayout(false);
@@ -366,7 +367,7 @@
         private System.Windows.Forms.CheckBox chkbIsActive;
         private People.ctrlPersonInfoWithFilter ctrlPersonInfoWithFilter1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMainTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnReset;
