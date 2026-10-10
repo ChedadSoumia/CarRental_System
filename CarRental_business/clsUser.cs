@@ -136,8 +136,11 @@ namespace CarRental_business
         }
         private bool _UpdateUser(string Password)
         {
-            this._HashPassword = clsSecurity.ComputeHash(Password);
-            return clsUserData.UpdateUser(this.UserID,this.PersonID,this.UserName,this._HashPassword,this.IsActive);
+            
+            if(!VerifyPassword(Password))
+                this._HashPassword = clsSecurity.ComputeHash(Password);
+
+            return clsUserData.UpdateUser(this.UserID,this.PersonID,this.UserName,this._HashPassword,this.IsActive) ;
         }
         public bool Save(string Password)
         {
@@ -158,8 +161,9 @@ namespace CarRental_business
             }
             return false;
         }
-        public bool ChangePassword()
+        public bool ChangePassword(string password)
         {
+            this._HashPassword = clsSecurity.ComputeHash(password);
             return clsUserData.ChangePassword(this.UserID, this._HashPassword);
         }
         public static bool Deactivate(int UserId)
@@ -167,6 +171,10 @@ namespace CarRental_business
             return clsUserData.Deactivate(UserId);
         }
 
-    
+        public bool VerifyPassword(string Password)
+        {
+            Password = clsSecurity.ComputeHash(Password);
+            return (this._HashPassword == Password);
+        }
     }
 }

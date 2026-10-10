@@ -30,7 +30,7 @@ namespace CarRental.Users
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmChangePassword changePassword = new frmChangePassword();
+            frmChangePassword changePassword = new frmChangePassword((int)dgvAllUsers.CurrentRow.Cells[0].Value);
             changePassword.ShowDialog();
         }
 

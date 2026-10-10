@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEditUser));
             this.tcUserInfo = new System.Windows.Forms.TabControl();
             this.tpPersonInfo = new System.Windows.Forms.TabPage();
             this.btnNext = new System.Windows.Forms.Button();
+            this.ctrlPersonInfoWithFilter1 = new CarRental.People.ctrlPersonInfoWithFilter();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
@@ -48,13 +51,14 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lblMainTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ctrlPersonInfoWithFilter1 = new CarRental.People.ctrlPersonInfoWithFilter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tcUserInfo.SuspendLayout();
             this.tpPersonInfo.SuspendLayout();
             this.tpLoginInfo.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tcUserInfo
@@ -87,7 +91,7 @@
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnNext.Image = global::CarRental.Properties.Resources.arrow_next2;
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNext.Location = new System.Drawing.Point(640, 472);
             this.btnNext.Name = "btnNext";
@@ -98,6 +102,15 @@
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // ctrlPersonInfoWithFilter1
+            // 
+            this.ctrlPersonInfoWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrlPersonInfoWithFilter1.FilterEnable = true;
+            this.ctrlPersonInfoWithFilter1.Location = new System.Drawing.Point(50, 15);
+            this.ctrlPersonInfoWithFilter1.Name = "ctrlPersonInfoWithFilter1";
+            this.ctrlPersonInfoWithFilter1.Size = new System.Drawing.Size(742, 447);
+            this.ctrlPersonInfoWithFilter1.TabIndex = 0;
             // 
             // tpLoginInfo
             // 
@@ -121,7 +134,7 @@
             this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrevious.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrevious.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnPrevious.Image = global::CarRental.Properties.Resources.arrow_back1;
+            this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
             this.btnPrevious.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrevious.Location = new System.Drawing.Point(17, 431);
             this.btnPrevious.Name = "btnPrevious";
@@ -141,7 +154,7 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
-            this.btnReset.Image = global::CarRental.Properties.Resources.filter_none_black;
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReset.Location = new System.Drawing.Point(482, 429);
             this.btnReset.Name = "btnReset";
@@ -158,7 +171,7 @@
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = global::CarRental.Properties.Resources.save_White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(632, 431);
             this.btnSave.Name = "btnSave";
@@ -203,6 +216,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(266, 43);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.Validating += new System.ComponentModel.CancelEventHandler(this.txtPassword_Validating);
             // 
             // label1
             // 
@@ -263,6 +277,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(266, 43);
             this.txtUsername.TabIndex = 2;
+            this.txtUsername.Validating += new System.ComponentModel.CancelEventHandler(this.txtUsername_Validating);
             // 
             // txtConfirmPasssword
             // 
@@ -272,6 +287,7 @@
             this.txtConfirmPasssword.Name = "txtConfirmPasssword";
             this.txtConfirmPasssword.Size = new System.Drawing.Size(266, 43);
             this.txtConfirmPasssword.TabIndex = 3;
+            this.txtConfirmPasssword.Validating += new System.ComponentModel.CancelEventHandler(this.txtConfirmPasssword_Validating);
             // 
             // chkbIsActive
             // 
@@ -311,7 +327,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Image = global::CarRental.Properties.Resources.identity_platform;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(5, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(74, 50);
@@ -319,14 +335,9 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // ctrlPersonInfoWithFilter1
+            // errorProvider1
             // 
-            this.ctrlPersonInfoWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlPersonInfoWithFilter1.FilterEnable = true;
-            this.ctrlPersonInfoWithFilter1.Location = new System.Drawing.Point(50, 15);
-            this.ctrlPersonInfoWithFilter1.Name = "ctrlPersonInfoWithFilter1";
-            this.ctrlPersonInfoWithFilter1.Size = new System.Drawing.Size(742, 447);
-            this.ctrlPersonInfoWithFilter1.TabIndex = 0;
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddEditUser
             // 
@@ -350,6 +361,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -377,5 +389,6 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

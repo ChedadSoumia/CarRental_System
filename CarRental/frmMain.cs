@@ -1,5 +1,6 @@
 ﻿using CarRental.Customers;
 using CarRental.Dashboard;
+using CarRental.Global_Classes;
 using CarRental.Maintenance;
 using CarRental.People;
 using CarRental.Users;
@@ -68,7 +69,7 @@ namespace CarRental
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            frmChangePassword changePassword = new frmChangePassword();
+            frmChangePassword changePassword = new frmChangePassword(clsGlobal.CurrentUser.UserID);
             changePassword.ShowDialog();
         }
     }

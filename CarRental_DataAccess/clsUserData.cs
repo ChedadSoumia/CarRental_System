@@ -410,7 +410,7 @@ namespace CarRental_DataAccess
                                 username = @UserName,
                                 password = @Password,
                                 is_active = @IsActive
-                                where UserID = @UserID";
+                                where user_id = @UserID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -418,7 +418,7 @@ namespace CarRental_DataAccess
             command.Parameters.AddWithValue("@UserName", Username);
             command.Parameters.AddWithValue("@Password", Password);
             command.Parameters.AddWithValue("@IsActive", IsActive);
-            command.Parameters.AddWithValue("UserID", UserID);
+            command.Parameters.AddWithValue("@UserID", UserID);
 
 
             try
@@ -429,7 +429,7 @@ namespace CarRental_DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogError("Error update user", ex);
                 return false;
             }
 

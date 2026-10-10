@@ -121,6 +121,7 @@ namespace CarRental.People
             ctrlPersonInfo1.ResetPersonInfo();
             txtFilter.Text = "";
             txtFilter.Focus();
+            txtFilter.Enabled = true;
         }
     }
 }

@@ -145,6 +145,7 @@ namespace CarRental.Users
             _User.UserName = txtUsername.Text;
             _User.IsActive = chkbIsActive.Checked;
 
+
             if (_User.Save(txtPassword.Text))
             {
                 lblUserID.Text = _User.UserID.ToString();
@@ -159,6 +160,79 @@ namespace CarRental.Users
                 MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void txtUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtUsername, "This field is required!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtUsername, null);
+            }
+
+            if (_Mode == enMode.AddNew)
+            {
+                if (clsUser.IsUserExist(txtUsername.Text.Trim()))
+                {
+
+                    e.Cancel = true;
+                    errorProvider1.SetError(txtUsername, "username is used by another user");
+                }
+                else
+                {
+                    errorProvider1.SetError(txtUsername, null);
+                }
+            }
+            else
+            {
+                if (_User.UserName != txtUsername.Text.Trim())
+                {
+                    if (clsUser.IsUserExist(txtUsername.Text.Trim()))
+                    {
+                        e.Cancel = true;
+                        errorProvider1.SetError(txtUsername, "username is used by another user");
+                        return;
+                    }
+                    else
+                    {
+                        errorProvider1.SetError(txtUsername, null);
+                    }
+                    ;
+                }
+            }
+        }
+
+        private void txtPassword_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtPassword.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtPassword, "This field is required!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtPassword, null);
+            }
+        }
+
+        private void txtConfirmPasssword_Validating(object sender, CancelEventArgs e)
+        {
+            if (txtPassword.Text != txtConfirmPasssword.Text)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtConfirmPasssword, "Password Confirmation does not match Password!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtConfirmPasssword, null);
+            }
         }
     }
 }

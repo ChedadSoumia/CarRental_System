@@ -11,7 +11,7 @@ namespace CarRental.Global_Classes
 {
     internal class clsGlobal
     {
-       public static clsUser CurrentUser  ;
+       public static clsUser CurrentUser = clsUser.Find(1)  ;
 
 
         public static bool RememberUsernameAndPassword(string Username, string Password)
