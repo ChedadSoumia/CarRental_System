@@ -47,6 +47,7 @@
     <Compile Include="clsEventLog.cs" />
     <Compile Include="clsFuleTypesData.cs" />
     <Compile Include="clsPersonData.cs" />
+    <Compile Include="clsSettingsData.cs" />
     <Compile Include="clsUserData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

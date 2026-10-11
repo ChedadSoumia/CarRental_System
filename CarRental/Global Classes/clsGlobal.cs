@@ -1,18 +1,22 @@
-﻿using System;
+﻿using CarRental_business;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
 using System.Threading.Tasks;
-
-using CarRental_business;
+using System.Windows.Forms;
 namespace CarRental.Global_Classes
 {
     internal class clsGlobal
     {
-       public static clsUser CurrentUser = clsUser.Find(1)  ;
-
+       public static clsUser CurrentUser ;
+        public static string keyPath = @"HKEY_CURRENT_USER\SOFTWARE\CarRental_System";
+        public static string keyPathForDelete = @"SOFTWARE\CarRental_System";
+        public static string valueUserame = "username";
+        public static string valuePassword = "password";
+        public static string key = "2792324901236663";
 
         public static bool RememberUsernameAndPassword(string Username, string Password)
         {
@@ -77,6 +81,68 @@ namespace CarRental.Global_Classes
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
+                return false;
+            }
+        }
+
+        public static bool WriteRegistryValue(string valueDataUsernam, string valueDataPassword)
+        {
+            try
+            {
+                // Write the value to the Registry
+                string EncryptPassword = clsSecurity.Encrypt(valueDataPassword, key);
+                Registry.SetValue(keyPath, valueUserame, valueDataUsernam, RegistryValueKind.String);
+                Registry.SetValue(keyPath, valuePassword, EncryptPassword, RegistryValueKind.String);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static bool ReadRegistryValue(ref string username, ref string password)
+        {
+            try
+            {
+                // Read the value from the Registry
+                username = Registry.GetValue(keyPath, valueUserame, null) as string;
+                string EncryptePassword = Registry.GetValue(keyPath, valuePassword, null) as string;
+                password = clsSecurity.Decrypt(EncryptePassword, key);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public static bool DeleteRegistryValue()
+        {
+            try
+            {
+                // Open the registry key in read/write mode with explicit registry view
+                using (RegistryKey baseKey = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Registry64))
+                {
+                    using (RegistryKey key = baseKey.OpenSubKey(keyPathForDelete, true))
+                    {
+                        if (key != null)
+                        {
+                            // Delete the specified value
+                            key.DeleteValue(valueUserame);
+                            key.DeleteValue(valuePassword);
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
                 return false;
             }
         }

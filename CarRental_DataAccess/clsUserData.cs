@@ -113,7 +113,7 @@ namespace CarRental_DataAccess
                 using (SqlCommand command = new SqlCommand("spu_GetUserInfoByUserName", connection))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@Username", UserID);
+                    command.Parameters.AddWithValue("@Username", Username);
                     try
                     {
                         connection.Open();
@@ -141,7 +141,7 @@ namespace CarRental_DataAccess
                     }
                     catch (Exception ex)
                     {
-                        //Console.WriteLine("Error: " + ex.Message);
+                        clsEventLog.LogError("Error find user by uxer ID ",ex);
 
                         isFound = false;
                     }
@@ -447,8 +447,8 @@ namespace CarRental_DataAccess
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
 
             string query = @"Update  Users  
-                            set Password = @Password
-                                where UserID = @UserID";
+                            set password = @Password
+                                where user_id = @UserID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -464,7 +464,7 @@ namespace CarRental_DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogError("Error Change password!", ex);
                 return false;
             }
 

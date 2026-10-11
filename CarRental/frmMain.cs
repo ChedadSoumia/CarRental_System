@@ -1,6 +1,7 @@
 ﻿using CarRental.Customers;
 using CarRental.Dashboard;
 using CarRental.Global_Classes;
+using CarRental.Login;
 using CarRental.Maintenance;
 using CarRental.People;
 using CarRental.Users;
@@ -19,10 +20,12 @@ namespace CarRental
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        frmLogin _frmLogin;
+        public frmMain(frmLogin frm)
         {
             InitializeComponent();
             _LoadForm(new frmDashboard());
+            _frmLogin = frm;
         }
         private void _LoadForm(object frm)
         {

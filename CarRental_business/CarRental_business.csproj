@@ -46,6 +46,7 @@
     <Compile Include="clsFuleTypes.cs" />
     <Compile Include="clsPerson.cs" />
     <Compile Include="clsSecurity.cs" />
+    <Compile Include="clsSettings.cs" />
     <Compile Include="clsUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -20,6 +20,7 @@ namespace CarRental_business
         public clsPerson clsPerson;
         public string UserName { get; set; }
         private string _HashPassword;
+        public int LoginHistoryID { get; set; }
         public bool IsActive { get; set; }
         public clsUser()
         {
