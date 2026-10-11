@@ -50,12 +50,12 @@ namespace CarRental_business
         }
         public static clsCustomers Find(int customerID)
         {
-            int customerId = -1, PersonId = -1;
+            int  PersonId = -1;
             string nationalNo = "", driverLicenseNumber = "";
             bool isFound = clsCustomersData.GetCustomerByID(customerID, ref PersonId, ref nationalNo, ref driverLicenseNumber);
             if (isFound)
             {
-                return new clsCustomers(customerId, PersonId, nationalNo, driverLicenseNumber);
+                return new clsCustomers(customerID, PersonId, nationalNo, driverLicenseNumber);
             }
             else
             {

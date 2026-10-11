@@ -41,6 +41,8 @@ namespace CarRental.Customers
         {
             ctrlPersonInfo1.LoadPersonInfo(_Customer.PersonID);
 
+
+            lblCustomerID.Text = _Customer.CustomerID.ToString();
             lblDriverLicenseNumber.Text = _Customer.DriverLicenseNumber;
             lblNationalNo.Text = _Customer.NationalNo;
 
