@@ -32,18 +32,21 @@ namespace CarRental.Customers
         {
             frmCustomerInfo customerInfo = new frmCustomerInfo((int)dgvAllCustomers.CurrentRow.Cells[0].Value);
             customerInfo.ShowDialog();
+            _RefreshCustomersList();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             frmAddEditCustomer addEditCustomer = new frmAddEditCustomer();
             addEditCustomer.ShowDialog();
+            _RefreshCustomersList();
         }
 
         private void addNewPersonToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddEditCustomer addEditCustomer = new frmAddEditCustomer();
             addEditCustomer.ShowDialog();
+            _RefreshCustomersList();
         }
 
         private void frmCustomersList_Load(object sender, EventArgs e)
@@ -155,6 +158,13 @@ namespace CarRental.Customers
                     MessageBox.Show("Customer was not deleted because it has data linked to it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void editPersonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddEditCustomer EditCustomer = new frmAddEditCustomer((int)dgvAllCustomers.CurrentRow.Cells[0].Value);
+            EditCustomer.ShowDialog();
+            _RefreshCustomersList();
         }
     }
 }

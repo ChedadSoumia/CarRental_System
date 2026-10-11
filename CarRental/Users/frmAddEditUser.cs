@@ -145,7 +145,6 @@ namespace CarRental.Users
             _User.UserName = txtUsername.Text;
             _User.IsActive = chkbIsActive.Checked;
 
-
             if (_User.Save(txtPassword.Text))
             {
                 lblUserID.Text = _User.UserID.ToString();

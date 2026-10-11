@@ -175,7 +175,7 @@ namespace CarRental_DataAccess
                         command.CommandType = CommandType.StoredProcedure;
 
                         command.Parameters.AddWithValue("@CustomerID", CustomerID);
-                        command.Parameters.AddWithValue("@@Person_id", PersonID);
+                        command.Parameters.AddWithValue("@Person_id", PersonID);
                         command.Parameters.AddWithValue("@National_no", NationalNo);
                         command.Parameters.AddWithValue("@Driver_license_number", DriverLicenseNumber);
 
@@ -256,6 +256,40 @@ namespace CarRental_DataAccess
             }
             return (rowsAffected > 0);
 
+        }
+
+        public static bool IsCustomerExistForPersonID(int PersonID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = "SELECT Found=1 FROM Customer WHERE PersonID = @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
         }
 
     }

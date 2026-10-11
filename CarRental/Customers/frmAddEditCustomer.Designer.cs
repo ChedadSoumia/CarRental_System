@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblMainTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ctrlPersonInfoWithFilter1 = new CarRental.People.ctrlPersonInfoWithFilter();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -42,10 +42,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNationalID = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ctrlPersonInfoWithFilter1 = new CarRental.People.ctrlPersonInfoWithFilter();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -53,7 +56,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.46342F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.53658F));
-            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblMainTitle, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(35, 21);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -62,16 +65,16 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(492, 64);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // label1
+            // lblMainTitle
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cairo", 20.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(84, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 64);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add New Customer";
+            this.lblMainTitle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblMainTitle.AutoSize = true;
+            this.lblMainTitle.Font = new System.Drawing.Font("Cairo", 20.2F, System.Drawing.FontStyle.Bold);
+            this.lblMainTitle.Location = new System.Drawing.Point(84, 0);
+            this.lblMainTitle.Name = "lblMainTitle";
+            this.lblMainTitle.Size = new System.Drawing.Size(309, 64);
+            this.lblMainTitle.TabIndex = 0;
+            this.lblMainTitle.Text = "Add New Customer";
             // 
             // pictureBox1
             // 
@@ -84,15 +87,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // ctrlPersonInfoWithFilter1
-            // 
-            this.ctrlPersonInfoWithFilter1.BackColor = System.Drawing.Color.White;
-            this.ctrlPersonInfoWithFilter1.FilterEnable = true;
-            this.ctrlPersonInfoWithFilter1.Location = new System.Drawing.Point(35, 91);
-            this.ctrlPersonInfoWithFilter1.Name = "ctrlPersonInfoWithFilter1";
-            this.ctrlPersonInfoWithFilter1.Size = new System.Drawing.Size(742, 447);
-            this.ctrlPersonInfoWithFilter1.TabIndex = 4;
-            // 
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.White;
@@ -103,13 +97,14 @@
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.btnReset.Image = global::CarRental.Properties.Resources.filter_none_black;
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(464, 704);
+            this.btnReset.Location = new System.Drawing.Point(464, 731);
             this.btnReset.Name = "btnReset";
             this.btnReset.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.btnReset.Size = new System.Drawing.Size(144, 45);
             this.btnReset.TabIndex = 14;
-            this.btnReset.Text = "RESET";
+            this.btnReset.Text = "      RESET";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSave
             // 
@@ -119,20 +114,21 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = global::CarRental.Properties.Resources.save_White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(614, 704);
+            this.btnSave.Location = new System.Drawing.Point(614, 731);
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.btnSave.Size = new System.Drawing.Size(144, 45);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "SAVE";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             this.groupBox1.Location = new System.Drawing.Point(39, 530);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 161);
+            this.groupBox1.Size = new System.Drawing.Size(718, 195);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Information";
@@ -155,15 +151,16 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(685, 124);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(685, 158);
             this.tableLayoutPanel2.TabIndex = 8;
             // 
             // txtDriverLicenseNumber
             // 
-            this.txtDriverLicenseNumber.Location = new System.Drawing.Point(232, 85);
+            this.txtDriverLicenseNumber.Location = new System.Drawing.Point(232, 107);
             this.txtDriverLicenseNumber.Name = "txtDriverLicenseNumber";
             this.txtDriverLicenseNumber.Size = new System.Drawing.Size(293, 39);
             this.txtDriverLicenseNumber.TabIndex = 4;
+            this.txtDriverLicenseNumber.Validating += new System.ComponentModel.CancelEventHandler(this.txtDriverLicenseNumber_Validating);
             // 
             // label2
             // 
@@ -190,7 +187,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 41);
+            this.label3.Location = new System.Drawing.Point(5, 52);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 32);
@@ -201,7 +198,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Cairo", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 82);
+            this.label5.Location = new System.Drawing.Point(5, 104);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(181, 32);
@@ -210,17 +207,31 @@
             // 
             // txtNationalID
             // 
-            this.txtNationalID.Location = new System.Drawing.Point(232, 44);
+            this.txtNationalID.Location = new System.Drawing.Point(232, 55);
             this.txtNationalID.Name = "txtNationalID";
             this.txtNationalID.Size = new System.Drawing.Size(293, 39);
             this.txtNationalID.TabIndex = 3;
+            this.txtNationalID.Validating += new System.ComponentModel.CancelEventHandler(this.txtNationalID_Validating);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // ctrlPersonInfoWithFilter1
+            // 
+            this.ctrlPersonInfoWithFilter1.BackColor = System.Drawing.Color.White;
+            this.ctrlPersonInfoWithFilter1.FilterEnable = true;
+            this.ctrlPersonInfoWithFilter1.Location = new System.Drawing.Point(35, 91);
+            this.ctrlPersonInfoWithFilter1.Name = "ctrlPersonInfoWithFilter1";
+            this.ctrlPersonInfoWithFilter1.Size = new System.Drawing.Size(742, 447);
+            this.ctrlPersonInfoWithFilter1.TabIndex = 4;
             // 
             // frmAddEditCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 32F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(779, 766);
+            this.ClientSize = new System.Drawing.Size(779, 787);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSave);
@@ -233,12 +244,14 @@
             this.Name = "frmAddEditCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddEditCustomer";
+            this.Load += new System.EventHandler(this.frmAddEditCustomer_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,7 +259,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblMainTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private People.ctrlPersonInfoWithFilter ctrlPersonInfoWithFilter1;
         private System.Windows.Forms.Button btnReset;
@@ -259,5 +272,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDriverLicenseNumber;
         private System.Windows.Forms.TextBox txtNationalID;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

@@ -113,5 +113,10 @@ namespace CarRental_business
             }
             return false;
         }
+
+        public static bool PersonIsCustomer(int PersonID)
+        {
+            return clsCustomersData.IsCustomerExistForPersonID(PersonID);
+        }
     }
 }
