@@ -30,8 +30,8 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.ctrlCustomerInfo1 = new CarRental.Customers.ctrlCustomerInfo();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ctrlCustomerInfo1 = new CarRental.Customers.ctrlCustomerInfo();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,16 +61,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer Information";
             // 
-            // ctrlCustomerInfo1
-            // 
-            this.ctrlCustomerInfo1.BackColor = System.Drawing.Color.White;
-            this.ctrlCustomerInfo1.Font = new System.Drawing.Font("Cairo", 10.2F);
-            this.ctrlCustomerInfo1.Location = new System.Drawing.Point(12, 85);
-            this.ctrlCustomerInfo1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.ctrlCustomerInfo1.Name = "ctrlCustomerInfo1";
-            this.ctrlCustomerInfo1.Size = new System.Drawing.Size(727, 542);
-            this.ctrlCustomerInfo1.TabIndex = 4;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -81,6 +71,16 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // ctrlCustomerInfo1
+            // 
+            this.ctrlCustomerInfo1.BackColor = System.Drawing.Color.White;
+            this.ctrlCustomerInfo1.Font = new System.Drawing.Font("Cairo", 10.2F);
+            this.ctrlCustomerInfo1.Location = new System.Drawing.Point(12, 85);
+            this.ctrlCustomerInfo1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ctrlCustomerInfo1.Name = "ctrlCustomerInfo1";
+            this.ctrlCustomerInfo1.Size = new System.Drawing.Size(727, 542);
+            this.ctrlCustomerInfo1.TabIndex = 4;
             // 
             // frmCustomerInfo
             // 
@@ -97,6 +97,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCustomerInfo";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmCustomerInfo_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -45,7 +45,7 @@
             this.lblPageNumber = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnLastPage = new System.Windows.Forms.Button();
-            this.dgvAllPeople = new System.Windows.Forms.DataGridView();
+            this.dgvAllCustomers = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showPeopleInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -63,7 +63,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -110,7 +110,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.27718F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.72282F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button1, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
@@ -125,7 +125,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.txtFilter);
-            this.panel1.Location = new System.Drawing.Point(465, 3);
+            this.panel1.Location = new System.Drawing.Point(464, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(327, 48);
             this.panel1.TabIndex = 10;
@@ -137,13 +137,16 @@
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(299, 39);
             this.txtFilter.TabIndex = 13;
+            this.txtFilter.Visible = false;
+            this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
+            this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter_KeyPress);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Image = global::CarRental.Properties.Resources.Add_Person_White;
-            this.button1.Location = new System.Drawing.Point(1127, 3);
+            this.button1.Location = new System.Drawing.Point(1126, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(55, 45);
             this.button1.TabIndex = 10;
@@ -172,10 +175,11 @@
             "Phone",
             "National No",
             "Driver License Number"});
-            this.cbFilter.Location = new System.Drawing.Point(110, 14);
+            this.cbFilter.Location = new System.Drawing.Point(110, 7);
             this.cbFilter.Name = "cbFilter";
             this.cbFilter.Size = new System.Drawing.Size(288, 40);
             this.cbFilter.TabIndex = 12;
+            this.cbFilter.SelectedIndexChanged += new System.EventHandler(this.cbFilter_SelectedIndexChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -247,12 +251,12 @@
             this.btnLastPage.TabIndex = 6;
             this.btnLastPage.UseVisualStyleBackColor = false;
             // 
-            // dgvAllPeople
+            // dgvAllCustomers
             // 
-            this.dgvAllPeople.AllowUserToAddRows = false;
-            this.dgvAllPeople.AllowUserToDeleteRows = false;
-            this.dgvAllPeople.AllowUserToOrderColumns = true;
-            this.dgvAllPeople.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAllCustomers.AllowUserToAddRows = false;
+            this.dgvAllCustomers.AllowUserToDeleteRows = false;
+            this.dgvAllCustomers.AllowUserToOrderColumns = true;
+            this.dgvAllCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cairo", 10.2F);
@@ -260,18 +264,18 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllPeople.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvAllPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllPeople.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvAllPeople.EnableHeadersVisualStyles = false;
-            this.dgvAllPeople.GridColor = System.Drawing.Color.White;
-            this.dgvAllPeople.Location = new System.Drawing.Point(29, 167);
-            this.dgvAllPeople.Name = "dgvAllPeople";
-            this.dgvAllPeople.ReadOnly = true;
-            this.dgvAllPeople.RowHeadersWidth = 51;
-            this.dgvAllPeople.RowTemplate.Height = 26;
-            this.dgvAllPeople.Size = new System.Drawing.Size(1224, 542);
-            this.dgvAllPeople.TabIndex = 10;
+            this.dgvAllCustomers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAllCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllCustomers.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvAllCustomers.EnableHeadersVisualStyles = false;
+            this.dgvAllCustomers.GridColor = System.Drawing.Color.White;
+            this.dgvAllCustomers.Location = new System.Drawing.Point(29, 167);
+            this.dgvAllCustomers.Name = "dgvAllCustomers";
+            this.dgvAllCustomers.ReadOnly = true;
+            this.dgvAllCustomers.RowHeadersWidth = 51;
+            this.dgvAllCustomers.RowTemplate.Height = 26;
+            this.dgvAllCustomers.Size = new System.Drawing.Size(1224, 542);
+            this.dgvAllCustomers.TabIndex = 10;
             // 
             // contextMenuStrip1
             // 
@@ -287,7 +291,7 @@
             this.makeItAsUserToolStripMenuItem,
             this.makeHimAsCustomerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(239, 232);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(239, 260);
             // 
             // showPeopleInfoToolStripMenuItem
             // 
@@ -323,6 +327,7 @@
             this.deletePersonToolStripMenuItem.Name = "deletePersonToolStripMenuItem";
             this.deletePersonToolStripMenuItem.Size = new System.Drawing.Size(238, 36);
             this.deletePersonToolStripMenuItem.Text = "Delete Customer";
+            this.deletePersonToolStripMenuItem.Click += new System.EventHandler(this.deletePersonToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -385,13 +390,14 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.dgvAllPeople);
+            this.Controls.Add(this.dgvAllCustomers);
             this.Font = new System.Drawing.Font("Cairo", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "frmCustomersList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCustomersList";
+            this.Load += new System.EventHandler(this.frmCustomersList_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -401,7 +407,7 @@
             this.panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPeople)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomers)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
@@ -426,7 +432,7 @@
         private System.Windows.Forms.Label lblPageNumber;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnLastPage;
-        private System.Windows.Forms.DataGridView dgvAllPeople;
+        private System.Windows.Forms.DataGridView dgvAllCustomers;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblCountRecord;
